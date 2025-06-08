@@ -1,0 +1,365 @@
+2025-05-28 03:05:44,140 - INFO - generate_key.py - generateSSHKey - 29 - New SSH Key Generated.
+2025-05-28 03:09:41,155 - INFO - generate_key.py - generateSSHKey - 23 - SSH Key Existed, Skip Generate Key.
+2025-05-28 03:25:21,267 - INFO - generate_key.py - generateSSHKey - 23 - SSH Key Existed, Skip Generate Key.
+2025-05-28 03:33:47,475 - INFO - generate_key.py - generateSSHKey - 23 - SSH Key Existed, Skip Generate Key.
+2025-05-28 03:33:58,226 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: []
+2025-05-28 03:34:10,852 - INFO - compiled.py - make_client - 78 - Make Client Receive Data: {'filename': 'test', 'address': '192.168.7.131', 'port': '3232', 'os_arch': 'android/amd64', 'address_proxy': '', 'port_proxy': '', 'flow': 'wss', 'upx': True, 'garble': True}
+2025-05-28 03:34:11,053 - INFO - compile.py - makeClient - 171 - Make client Cmd: link --name test --goos android --goarch amd64 -s 192.168.7.131:3232 --upx --garble  --wss
+2025-05-28 03:34:11,820 - INFO - rssh.py - exec_command - 49 - link --name test --goos android --goarch amd64 -s 192.168.7.131:3232 --upx --garble  --wss: Error: exit status 1
+android/amd64 requires external (cgo) linking, but cgo is not enabled
+2025-05-28 03:34:28,932 - INFO - compiled.py - make_client - 78 - Make Client Receive Data: {'filename': 'test', 'address': '192.168.7.131', 'port': '3232', 'os_arch': 'linux/amd64', 'address_proxy': '', 'port_proxy': '', 'flow': 'wss', 'upx': True, 'garble': True}
+2025-05-28 03:34:29,131 - INFO - compile.py - makeClient - 171 - Make client Cmd: link --name test --goos linux --goarch amd64 -s 192.168.7.131:3232 --upx --garble  --wss
+2025-05-28 03:35:21,894 - INFO - rssh.py - exec_command - 49 - link --name test --goos linux --goarch amd64 -s 192.168.7.131:3232 --upx --garble  --wss: http://:3232/test
+2025-05-28 03:40:49,319 - INFO - generate_key.py - generateSSHKey - 23 - SSH Key Existed, Skip Generate Key.
+2025-05-28 03:41:06,456 - ERROR - app.py - log_exception - 1744 - Exception on /supershell/compile/update [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/views/compiled.py", line 36, in update_compiled_client
+    source_list = get_compiled_clients_list()
+  File "/app/module/compile.py", line 28, in get_compiled_clients_list
+    cursor.execute(query)
+sqlite3.OperationalError: no such column: filename
+2025-05-28 03:45:50,684 - INFO - generate_key.py - generateSSHKey - 23 - SSH Key Existed, Skip Generate Key.
+2025-05-28 03:46:10,985 - ERROR - app.py - log_exception - 1744 - Exception on /supershell/compile/update [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/views/compiled.py", line 36, in update_compiled_client
+    source_list = get_compiled_clients_list()
+  File "/app/module/compile.py", line 24, in get_compiled_clients_list
+    cursor.execute("""
+sqlite3.OperationalError: no such table: compiled_clients
+2025-05-28 04:16:39,568 - INFO - generate_key.py - generateSSHKey - 23 - SSH Key Existed, Skip Generate Key.
+2025-05-28 04:17:09,082 - ERROR - app.py - log_exception - 1744 - Exception on /supershell/compile/update [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/views/compiled.py", line 36, in update_compiled_client
+    source_list = get_compiled_clients_list()
+  File "/app/module/compile.py", line 39, in get_compiled_clients_list
+    print(db_path,query)
+NameError: name 'query' is not defined
+2025-05-28 04:18:46,298 - INFO - generate_key.py - generateSSHKey - 23 - SSH Key Existed, Skip Generate Key.
+2025-05-28 04:20:40,327 - INFO - compiled.py - make_client - 78 - Make Client Receive Data: {'filename': 'test', 'address': '192.168.7.131', 'port': '3232', 'os_arch': 'freebsd/amd64', 'address_proxy': '', 'port_proxy': '', 'flow': 'ws', 'upx': False, 'garble': True}
+2025-05-28 04:20:40,596 - INFO - compile.py - makeClient - 190 - Make client Cmd: link --name test --goos freebsd --goarch amd64 -s 192.168.7.131:3232  --garble  --ws
+2025-05-28 04:21:38,667 - INFO - rssh.py - exec_command - 49 - link --name test --goos freebsd --goarch amd64 -s 192.168.7.131:3232  --garble  --ws: constraint failed: UNIQUE constraint failed: downloads.url_path (2067)
+2025-05-28 04:21:51,667 - INFO - compiled.py - make_client - 78 - Make Client Receive Data: {'filename': 'hello', 'address': '192.168.7.131', 'port': '3232', 'os_arch': 'freebsd/amd64', 'address_proxy': '', 'port_proxy': '', 'flow': 'ws', 'upx': False, 'garble': True}
+2025-05-28 04:21:51,837 - INFO - compile.py - makeClient - 190 - Make client Cmd: link --name hello --goos freebsd --goarch amd64 -s 192.168.7.131:3232  --garble  --ws
+2025-05-28 04:21:54,399 - INFO - rssh.py - exec_command - 49 - link --name hello --goos freebsd --goarch amd64 -s 192.168.7.131:3232  --garble  --ws: http://:3232/hello
+2025-05-28 04:22:24,363 - INFO - rssh.py - exec_command - 49 - link -r test: Removed test
+2025-05-28 04:22:26,551 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: []
+2025-05-28 04:22:30,995 - ERROR - app.py - log_exception - 1744 - Exception on /supershell/compile/download/hello [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/views/compiled.py", line 46, in download_file
+    real_path = get_real_filename(secure_filename(filename))
+  File "/app/module/compile.py", line 90, in get_real_filename
+    real_path = compiled_clients_file_path + '/' + clients_dict[filename]['Path'].split('/')[-1]
+KeyError: 'hello'
+2025-05-28 05:21:08,019 - INFO - generate_key.py - generateSSHKey - 23 - SSH Key Existed, Skip Generate Key.
+2025-05-28 05:21:26,775 - ERROR - app.py - log_exception - 1744 - Exception on /supershell/compile/update [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/views/compiled.py", line 36, in update_compiled_client
+    source_list = get_compiled_clients_list()
+  File "/app/module/compile.py", line 34, in get_compiled_clients_list
+    rows = query_db(query)
+  File "/app/module/func.py", line 12, in query_db
+    db_path = compiled_clients_file_path + '/data.db'
+NameError: name 'compiled_clients_file_path' is not defined
+2025-05-28 05:25:04,492 - INFO - generate_key.py - generateSSHKey - 23 - SSH Key Existed, Skip Generate Key.
+2025-05-28 05:25:52,899 - ERROR - app.py - log_exception - 1744 - Exception on /supershell/compile/download/hello [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/views/compiled.py", line 46, in download_file
+    real_path = get_real_filename(secure_filename(filename))
+  File "/app/module/compile.py", line 81, in get_real_filename
+    rows = query_db(query)
+  File "/app/module/func.py", line 16, in query_db
+    cursor.execute( query)
+sqlite3.OperationalError: no such column: hello
+2025-05-28 05:30:30,485 - INFO - generate_key.py - generateSSHKey - 23 - SSH Key Existed, Skip Generate Key.
+2025-05-28 05:30:39,695 - ERROR - app.py - log_exception - 1744 - Exception on /supershell/compile/download/hello [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/views/compiled.py", line 46, in download_file
+    real_path = get_real_filename(secure_filename(filename))
+  File "/app/module/compile.py", line 86, in get_real_filename
+    return real_path
+NameError: name 'real_path' is not defined
+2025-05-28 05:32:32,411 - INFO - generate_key.py - generateSSHKey - 23 - SSH Key Existed, Skip Generate Key.
+2025-05-28 05:32:37,365 - ERROR - app.py - log_exception - 1744 - Exception on /supershell/compile/download/hello [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/views/compiled.py", line 49, in download_file
+    response.headers['content-length'] = os.stat(real_path).st_size
+FileNotFoundError: [Errno 2] No such file or directory: '/cache//data/cache/6af5ef2e532ec7ec427c0c1e7375311a'
+2025-05-28 05:36:31,312 - INFO - generate_key.py - generateSSHKey - 23 - SSH Key Existed, Skip Generate Key.
+2025-05-28 05:36:44,976 - ERROR - app.py - log_exception - 1744 - Exception on /supershell/compile/download/hello [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/views/compiled.py", line 46, in download_file
+    real_path = get_real_filename(secure_filename(filename))
+  File "/app/module/compile.py", line 83, in get_real_filename
+    real_path = rows[0][0].removeprefix("/data")
+AttributeError: 'str' object has no attribute 'removeprefix'
+2025-05-28 05:41:20,939 - INFO - generate_key.py - generateSSHKey - 23 - SSH Key Existed, Skip Generate Key.
+2025-05-28 05:54:55,400 - INFO - generate_key.py - generateSSHKey - 23 - SSH Key Existed, Skip Generate Key.
+2025-05-28 05:55:17,753 - ERROR - compile.py - deleteCompileClient - 110 - Incorrect number of bindings supplied. The current statement uses 1, and there are 5 supplied.
+Traceback (most recent call last):
+  File "/app/module/compile.py", line 92, in deleteCompileClient
+    delete_db(filename)
+  File "/app/module/func.py", line 34, in delete_db
+    cursor.execute(query,filename)
+sqlite3.ProgrammingError: Incorrect number of bindings supplied. The current statement uses 1, and there are 5 supplied.
+2025-05-28 05:59:04,230 - INFO - generate_key.py - generateSSHKey - 23 - SSH Key Existed, Skip Generate Key.
+2025-05-28 05:59:19,581 - ERROR - compile.py - deleteCompileClient - 110 - name 'os' is not defined
+Traceback (most recent call last):
+  File "/app/module/compile.py", line 92, in deleteCompileClient
+    delete_db(filename)
+  File "/app/module/func.py", line 40, in delete_db
+    os.remove(real_path)
+NameError: name 'os' is not defined
+2025-05-28 06:01:03,345 - INFO - generate_key.py - generateSSHKey - 23 - SSH Key Existed, Skip Generate Key.
+2025-05-28 06:01:06,828 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: []
+2025-05-28 06:01:18,866 - INFO - rssh.py - exec_command - 49 - link -r hello: Unable to remove hello: remove /data/cache/6af5ef2e532ec7ec427c0c1e7375311a: no such file or directory
+2025-05-28 06:02:29,103 - INFO - rssh.py - exec_command - 49 - link -r hello: No links match
+2025-05-28 06:03:39,012 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: []
+2025-05-28 06:03:59,298 - INFO - compiled.py - make_client - 78 - Make Client Receive Data: {'filename': 'test', 'address': '192.168.7.131', 'port': '3232', 'os_arch': 'linux/amd64', 'address_proxy': '', 'port_proxy': '', 'flow': 'ws', 'upx': True, 'garble': True}
+2025-05-28 06:03:59,499 - INFO - compile.py - makeClient - 185 - Make client Cmd: link --name test --goos linux --goarch amd64 -s 192.168.7.131:3232 --upx --garble  --ws
+2025-05-28 06:04:56,026 - INFO - rssh.py - exec_command - 49 - link --name test --goos linux --goarch amd64 -s 192.168.7.131:3232 --upx --garble  --ws: http://:3232/test
+2025-05-28 06:06:22,357 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: []
+2025-05-28 06:06:23,078 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: []
+2025-05-28 06:06:23,931 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: []
+2025-05-28 06:06:24,338 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: []
+2025-05-28 06:06:24,512 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: []
+2025-05-28 06:06:24,674 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: []
+2025-05-28 06:09:18,840 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: []
+2025-05-28 06:12:46,685 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: []
+2025-05-28 06:25:23,136 - INFO - rssh.py - exec_command - 49 - ls: b88d377f96ee89046bb0433fafcf5d4cc069dc3a 2b11dac36bd06a2df06295e91bf0295f69efee82 root.kali 192.168.7.131:45224, owners: public, version: SSH-v2.6.18-2-gd042bc4-linux_amd64
+2025-05-28 06:25:23,136 - INFO - webhook.py - handle_client_data - 84 - Client Connect: {'Full': '{"Status":"connected", "ID":"b88d377f96ee89046bb0433fafcf5d4cc069dc3a","IP":"192.168.7.131:45224","HostName":"root.kali","Version":"SSH-v2.6.18-2-gd042bc4-linux_amd64","Timestamp":"2025-05-28T06:25:23.1"}'}
+2025-05-28 06:25:23,484 - INFO - ssh.py - exec_command - 74 - whoami: root
+2025-05-28 06:25:24,160 - ERROR - webhook.py - ip2region - 71 - 'countryCode'
+Traceback (most recent call last):
+  File "/app/module/webhook.py", line 68, in ip2region
+    country_code = json.loads(result)['countryCode']
+KeyError: 'countryCode'
+2025-05-28 06:25:24,198 - INFO - webhook.py - handle_client_data - 117 - No client info history found, set group and mark to default values
+2025-05-28 06:25:24,245 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: [{'sessid': 'b88d377f96ee89046bb0433fafcf5d4cc069dc3a', 'hostname': 'root.kali', 'address': '192.168.7.131:45224', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:25:23', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}]
+2025-05-28 06:25:35,606 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: [{'sessid': 'b88d377f96ee89046bb0433fafcf5d4cc069dc3a', 'hostname': 'root.kali', 'address': '192.168.7.131:45224', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:25:23', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}]
+2025-05-28 06:26:33,302 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: [{'sessid': 'b88d377f96ee89046bb0433fafcf5d4cc069dc3a', 'hostname': 'root.kali', 'address': '192.168.7.131:45224', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:25:23', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}]
+2025-05-28 06:26:33,986 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: [{'sessid': 'b88d377f96ee89046bb0433fafcf5d4cc069dc3a', 'hostname': 'root.kali', 'address': '192.168.7.131:45224', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:25:23', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}]
+2025-05-28 06:27:14,318 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: [{'sessid': 'b88d377f96ee89046bb0433fafcf5d4cc069dc3a', 'hostname': 'root.kali', 'address': '192.168.7.131:45224', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:25:23', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}]
+2025-05-28 06:27:17,402 - INFO - rssh.py - exec_command - 49 - ls: b88d377f96ee89046bb0433fafcf5d4cc069dc3a 2b11dac36bd06a2df06295e91bf0295f69efee82 root.kali 192.168.7.131:45224, owners: public, version: SSH-v2.6.18-2-gd042bc4-linux_amd64
+2025-05-28 06:27:17,407 - INFO - webhook.py - handle_client_data - 84 - Client Connect: {'Full': '{"Status":"connected", "ID":"b88d377f96ee89046bb0433fafcf5d4cc069dc3a","IP":"192.168.7.131:45224","HostName":"root.kali","Version":"SSH-v2.6.18-2-gd042bc4-linux_amd64","Timestamp":"2025-05-28T06:27:17.1"}'}
+2025-05-28 06:27:17,812 - INFO - ssh.py - exec_command - 74 - whoami: root
+2025-05-28 06:27:18,262 - ERROR - webhook.py - ip2region - 71 - 'countryCode'
+Traceback (most recent call last):
+  File "/app/module/webhook.py", line 68, in ip2region
+    country_code = json.loads(result)['countryCode']
+KeyError: 'countryCode'
+2025-05-28 06:27:18,286 - INFO - webhook.py - handle_client_data - 117 - No client info history found, set group and mark to default values
+2025-05-28 06:27:18,311 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: [{'sessid': 'b88d377f96ee89046bb0433fafcf5d4cc069dc3a', 'hostname': 'root.kali', 'address': '192.168.7.131:45224', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:27:17', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}]
+2025-05-28 06:27:19,849 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: [{'sessid': 'b88d377f96ee89046bb0433fafcf5d4cc069dc3a', 'hostname': 'root.kali', 'address': '192.168.7.131:45224', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:27:17', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}]
+2025-05-28 06:27:20,552 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: [{'sessid': 'b88d377f96ee89046bb0433fafcf5d4cc069dc3a', 'hostname': 'root.kali', 'address': '192.168.7.131:45224', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:27:17', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}]
+2025-05-28 06:32:27,607 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: [{'sessid': 'b88d377f96ee89046bb0433fafcf5d4cc069dc3a', 'hostname': 'root.kali', 'address': '192.168.7.131:45224', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:27:17', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}]
+2025-05-28 06:32:30,482 - INFO - rssh.py - exec_command - 49 - ls: No RSSH clients connected
+2025-05-28 06:32:30,518 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: []
+2025-05-28 06:33:47,175 - INFO - rssh.py - exec_command - 49 - kill b88d377f96ee89046bb0433fafcf5d4cc069dc3a: Kill 1 clients? [N/y]
+2025-05-28 06:33:47,175 - INFO - rssh.py - exec_command - 49 - kill b88d377f96ee89046bb0433fafcf5d4cc069dc3a: Kill 1 clients? [N/y]
+2025-05-28 06:33:47,175 - INFO - rssh.py - exec_command - 49 - kill b88d377f96ee89046bb0433fafcf5d4cc069dc3a: Kill 1 clients? [N/y]
+2025-05-28 06:35:20,958 - INFO - generate_key.py - generateSSHKey - 23 - SSH Key Existed, Skip Generate Key.
+2025-05-28 06:36:32,488 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: [{'sessid': 'b88d377f96ee89046bb0433fafcf5d4cc069dc3a', 'hostname': 'root.kali', 'address': '192.168.7.131:45224', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:27:17', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}]
+2025-05-28 06:36:33,785 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: [{'sessid': 'b88d377f96ee89046bb0433fafcf5d4cc069dc3a', 'hostname': 'root.kali', 'address': '192.168.7.131:45224', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:27:17', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}]
+2025-05-28 06:36:36,649 - INFO - rssh.py - exec_command - 49 - kill -y b88d377f96ee89046bb0433fafcf5d4cc069dc3a: No clients matched 'b88d377f96ee89046bb0433fafcf5d4cc069dc3a'
+2025-05-28 06:36:41,308 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: [{'sessid': 'b88d377f96ee89046bb0433fafcf5d4cc069dc3a', 'hostname': 'root.kali', 'address': '192.168.7.131:45224', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:27:17', 'version': 'v2.6.18', 'status': 'false', 'group': '-', 'mark': ''}]
+2025-05-28 06:36:43,897 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: []
+2025-05-28 06:36:45,346 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: []
+2025-05-28 06:36:50,566 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: []
+2025-05-28 06:36:51,193 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: []
+2025-05-28 06:36:52,796 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: []
+2025-05-28 06:36:52,991 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: []
+2025-05-28 06:36:55,120 - INFO - rssh.py - exec_command - 49 - ls: c5d9d760b870ffec24affcc00863c5fafacf213b 2b11dac36bd06a2df06295e91bf0295f69efee82 root.kali 192.168.7.131:34652, owners: public, version: SSH-v2.6.18-2-gd042bc4-linux_amd64
+dc7f3acb62191f9391f3d4982ba34f204ffc96d3 2b11dac36bd06a2df06295e91bf0295f69efee82 root.kali 192.168.7.131:43386, owners: public, version: SSH-v2.6.18-2-gd042bc4-linux_amd64
+2025-05-28 06:36:55,161 - INFO - webhook.py - handle_client_data - 84 - Client Connect: {'Full': '{"Status":"connected", "ID":"c5d9d760b870ffec24affcc00863c5fafacf213b","IP":"192.168.7.131:34652","HostName":"root.kali","Version":"SSH-v2.6.18-2-gd042bc4-linux_amd64","Timestamp":"2025-05-28T06:36:55.1"}'}
+2025-05-28 06:36:55,579 - INFO - ssh.py - exec_command - 74 - whoami: root
+2025-05-28 06:36:56,032 - ERROR - webhook.py - ip2region - 71 - 'countryCode'
+Traceback (most recent call last):
+  File "/app/module/webhook.py", line 68, in ip2region
+    country_code = json.loads(result)['countryCode']
+KeyError: 'countryCode'
+2025-05-28 06:36:56,102 - INFO - webhook.py - handle_client_data - 117 - No client info history found, set group and mark to default values
+2025-05-28 06:36:56,102 - INFO - webhook.py - handle_client_data - 84 - Client Connect: {'Full': '{"Status":"connected", "ID":"dc7f3acb62191f9391f3d4982ba34f204ffc96d3","IP":"192.168.7.131:43386","HostName":"root.kali","Version":"SSH-v2.6.18-2-gd042bc4-linux_amd64","Timestamp":"2025-05-28T06:36:56.1"}'}
+2025-05-28 06:36:56,492 - INFO - ssh.py - exec_command - 74 - whoami: root
+2025-05-28 06:36:56,978 - ERROR - webhook.py - ip2region - 71 - 'countryCode'
+Traceback (most recent call last):
+  File "/app/module/webhook.py", line 68, in ip2region
+    country_code = json.loads(result)['countryCode']
+KeyError: 'countryCode'
+2025-05-28 06:36:57,047 - INFO - webhook.py - handle_client_data - 117 - No client info history found, set group and mark to default values
+2025-05-28 06:36:57,086 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: [{'sessid': 'dc7f3acb62191f9391f3d4982ba34f204ffc96d3', 'hostname': 'root.kali', 'address': '192.168.7.131:43386', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:36:56', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}, {'sessid': 'c5d9d760b870ffec24affcc00863c5fafacf213b', 'hostname': 'root.kali', 'address': '192.168.7.131:34652', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:36:55', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}]
+2025-05-28 06:36:59,357 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: [{'sessid': 'dc7f3acb62191f9391f3d4982ba34f204ffc96d3', 'hostname': 'root.kali', 'address': '192.168.7.131:43386', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:36:56', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}, {'sessid': 'c5d9d760b870ffec24affcc00863c5fafacf213b', 'hostname': 'root.kali', 'address': '192.168.7.131:34652', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:36:55', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}]
+2025-05-28 06:37:01,922 - INFO - rssh.py - exec_command - 49 - kill -y dc7f3acb62191f9391f3d4982ba34f204ffc96d3: dc7f3acb62191f9391f3d4982ba34f204ffc96d3 killed
+2025-05-28 06:37:01,956 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: [{'sessid': 'dc7f3acb62191f9391f3d4982ba34f204ffc96d3', 'hostname': 'root.kali', 'address': '192.168.7.131:43386', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:36:56', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}, {'sessid': 'c5d9d760b870ffec24affcc00863c5fafacf213b', 'hostname': 'root.kali', 'address': '192.168.7.131:34652', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:36:55', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}]
+2025-05-28 06:37:05,368 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: [{'sessid': 'dc7f3acb62191f9391f3d4982ba34f204ffc96d3', 'hostname': 'root.kali', 'address': '192.168.7.131:43386', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:36:56', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}, {'sessid': 'c5d9d760b870ffec24affcc00863c5fafacf213b', 'hostname': 'root.kali', 'address': '192.168.7.131:34652', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:36:55', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}]
+2025-05-28 06:37:07,380 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: [{'sessid': 'dc7f3acb62191f9391f3d4982ba34f204ffc96d3', 'hostname': 'root.kali', 'address': '192.168.7.131:43386', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:36:56', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}, {'sessid': 'c5d9d760b870ffec24affcc00863c5fafacf213b', 'hostname': 'root.kali', 'address': '192.168.7.131:34652', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:36:55', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}]
+2025-05-28 06:37:07,581 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: [{'sessid': 'dc7f3acb62191f9391f3d4982ba34f204ffc96d3', 'hostname': 'root.kali', 'address': '192.168.7.131:43386', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:36:56', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}, {'sessid': 'c5d9d760b870ffec24affcc00863c5fafacf213b', 'hostname': 'root.kali', 'address': '192.168.7.131:34652', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:36:55', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}]
+2025-05-28 06:37:07,765 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: [{'sessid': 'dc7f3acb62191f9391f3d4982ba34f204ffc96d3', 'hostname': 'root.kali', 'address': '192.168.7.131:43386', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:36:56', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}, {'sessid': 'c5d9d760b870ffec24affcc00863c5fafacf213b', 'hostname': 'root.kali', 'address': '192.168.7.131:34652', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:36:55', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}]
+2025-05-28 06:37:07,950 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: [{'sessid': 'dc7f3acb62191f9391f3d4982ba34f204ffc96d3', 'hostname': 'root.kali', 'address': '192.168.7.131:43386', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:36:56', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}, {'sessid': 'c5d9d760b870ffec24affcc00863c5fafacf213b', 'hostname': 'root.kali', 'address': '192.168.7.131:34652', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:36:55', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}]
+2025-05-28 06:37:08,103 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: [{'sessid': 'dc7f3acb62191f9391f3d4982ba34f204ffc96d3', 'hostname': 'root.kali', 'address': '192.168.7.131:43386', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:36:56', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}, {'sessid': 'c5d9d760b870ffec24affcc00863c5fafacf213b', 'hostname': 'root.kali', 'address': '192.168.7.131:34652', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:36:55', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}]
+2025-05-28 06:37:10,121 - INFO - rssh.py - exec_command - 49 - ls: c5d9d760b870ffec24affcc00863c5fafacf213b 2b11dac36bd06a2df06295e91bf0295f69efee82 root.kali 192.168.7.131:34652, owners: public, version: SSH-v2.6.18-2-gd042bc4-linux_amd64
+2025-05-28 06:37:10,125 - INFO - webhook.py - handle_client_data - 84 - Client Connect: {'Full': '{"Status":"connected", "ID":"c5d9d760b870ffec24affcc00863c5fafacf213b","IP":"192.168.7.131:34652","HostName":"root.kali","Version":"SSH-v2.6.18-2-gd042bc4-linux_amd64","Timestamp":"2025-05-28T06:37:10.1"}'}
+2025-05-28 06:37:10,478 - INFO - ssh.py - exec_command - 74 - whoami: 
+2025-05-28 06:37:10,479 - INFO - webhook.py - get_target_user - 35 - exec "whoami" to get username failed, now attempt to exec "id".
+2025-05-28 06:37:10,566 - INFO - ssh.py - exec_command - 74 - id: uid=0(root) gid=0(root) groups=0(root)
+2025-05-28 06:37:11,054 - ERROR - webhook.py - ip2region - 71 - 'countryCode'
+Traceback (most recent call last):
+  File "/app/module/webhook.py", line 68, in ip2region
+    country_code = json.loads(result)['countryCode']
+KeyError: 'countryCode'
+2025-05-28 06:37:11,064 - INFO - webhook.py - handle_client_data - 117 - No client info history found, set group and mark to default values
+2025-05-28 06:37:11,112 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: [{'sessid': 'c5d9d760b870ffec24affcc00863c5fafacf213b', 'hostname': 'root.kali', 'address': '192.168.7.131:34652', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:37:10', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}]
+2025-05-28 06:37:13,577 - INFO - rssh.py - exec_command - 49 - kill -y c5d9d760b870ffec24affcc00863c5fafacf213b: c5d9d760b870ffec24affcc00863c5fafacf213b killed
+2025-05-28 06:37:13,612 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: [{'sessid': 'c5d9d760b870ffec24affcc00863c5fafacf213b', 'hostname': 'root.kali', 'address': '192.168.7.131:34652', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:37:10', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}]
+2025-05-28 06:37:15,777 - INFO - rssh.py - exec_command - 49 - ls: c5d9d760b870ffec24affcc00863c5fafacf213b 2b11dac36bd06a2df06295e91bf0295f69efee82 root.kali 192.168.7.131:34652, owners: public, version: SSH-v2.6.18-2-gd042bc4-linux_amd64
+2025-05-28 06:37:15,780 - INFO - webhook.py - handle_client_data - 84 - Client Connect: {'Full': '{"Status":"connected", "ID":"c5d9d760b870ffec24affcc00863c5fafacf213b","IP":"192.168.7.131:34652","HostName":"root.kali","Version":"SSH-v2.6.18-2-gd042bc4-linux_amd64","Timestamp":"2025-05-28T06:37:15.1"}'}
+2025-05-28 06:37:16,258 - INFO - ssh.py - exec_command - 74 - whoami: root
+2025-05-28 06:37:16,705 - ERROR - webhook.py - ip2region - 71 - 'countryCode'
+Traceback (most recent call last):
+  File "/app/module/webhook.py", line 68, in ip2region
+    country_code = json.loads(result)['countryCode']
+KeyError: 'countryCode'
+2025-05-28 06:37:16,719 - INFO - webhook.py - handle_client_data - 117 - No client info history found, set group and mark to default values
+2025-05-28 06:37:16,743 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: [{'sessid': 'c5d9d760b870ffec24affcc00863c5fafacf213b', 'hostname': 'root.kali', 'address': '192.168.7.131:34652', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:37:15', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}]
+2025-05-28 06:37:19,245 - INFO - rssh.py - exec_command - 49 - ls: No RSSH clients connected
+2025-05-28 06:37:19,263 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: []
+2025-05-28 06:38:25,001 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: []
+2025-05-28 06:38:26,967 - INFO - rssh.py - exec_command - 49 - ls: 50cb4e05e33dfbe0bb1f83dc81a6e1d80a6bbe55 2b11dac36bd06a2df06295e91bf0295f69efee82 root.kali 192.168.7.131:33156, owners: public, version: SSH-v2.6.18-2-gd042bc4-linux_amd64
+2025-05-28 06:38:26,969 - INFO - webhook.py - handle_client_data - 84 - Client Connect: {'Full': '{"Status":"connected", "ID":"50cb4e05e33dfbe0bb1f83dc81a6e1d80a6bbe55","IP":"192.168.7.131:33156","HostName":"root.kali","Version":"SSH-v2.6.18-2-gd042bc4-linux_amd64","Timestamp":"2025-05-28T06:38:26.1"}'}
+2025-05-28 06:38:27,393 - INFO - ssh.py - exec_command - 74 - whoami: root
+2025-05-28 06:38:27,944 - ERROR - webhook.py - ip2region - 71 - 'countryCode'
+Traceback (most recent call last):
+  File "/app/module/webhook.py", line 68, in ip2region
+    country_code = json.loads(result)['countryCode']
+KeyError: 'countryCode'
+2025-05-28 06:38:27,987 - INFO - webhook.py - handle_client_data - 117 - No client info history found, set group and mark to default values
+2025-05-28 06:38:28,009 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: [{'sessid': '50cb4e05e33dfbe0bb1f83dc81a6e1d80a6bbe55', 'hostname': 'root.kali', 'address': '192.168.7.131:33156', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:38:26', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}]
+2025-05-28 06:38:33,239 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: [{'sessid': '50cb4e05e33dfbe0bb1f83dc81a6e1d80a6bbe55', 'hostname': 'root.kali', 'address': '192.168.7.131:33156', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:38:26', 'version': 'v2.6.18', 'status': 'true', 'group': '测试', 'mark': ''}]
+2025-05-28 06:38:35,466 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: [{'sessid': '50cb4e05e33dfbe0bb1f83dc81a6e1d80a6bbe55', 'hostname': 'root.kali', 'address': '192.168.7.131:33156', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:38:26', 'version': 'v2.6.18', 'status': 'true', 'group': '测试', 'mark': ''}]
+2025-05-28 06:38:39,266 - INFO - rssh.py - exec_command - 49 - kill -y 50cb4e05e33dfbe0bb1f83dc81a6e1d80a6bbe55: 50cb4e05e33dfbe0bb1f83dc81a6e1d80a6bbe55 killed
+2025-05-28 06:38:39,291 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: [{'sessid': '50cb4e05e33dfbe0bb1f83dc81a6e1d80a6bbe55', 'hostname': 'root.kali', 'address': '192.168.7.131:33156', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:38:26', 'version': 'v2.6.18', 'status': 'true', 'group': '测试', 'mark': ''}]
+2025-05-28 06:38:43,350 - INFO - rssh.py - exec_command - 49 - ls: 50cb4e05e33dfbe0bb1f83dc81a6e1d80a6bbe55 2b11dac36bd06a2df06295e91bf0295f69efee82 root.kali 192.168.7.131:33156, owners: public, version: SSH-v2.6.18-2-gd042bc4-linux_amd64
+2025-05-28 06:38:43,356 - INFO - webhook.py - handle_client_data - 84 - Client Connect: {'Full': '{"Status":"connected", "ID":"50cb4e05e33dfbe0bb1f83dc81a6e1d80a6bbe55","IP":"192.168.7.131:33156","HostName":"root.kali","Version":"SSH-v2.6.18-2-gd042bc4-linux_amd64","Timestamp":"2025-05-28T06:38:43.1"}'}
+2025-05-28 06:38:43,805 - INFO - ssh.py - exec_command - 74 - whoami: root
+2025-05-28 06:38:44,304 - ERROR - webhook.py - ip2region - 71 - 'countryCode'
+Traceback (most recent call last):
+  File "/app/module/webhook.py", line 68, in ip2region
+    country_code = json.loads(result)['countryCode']
+KeyError: 'countryCode'
+2025-05-28 06:38:44,324 - INFO - webhook.py - handle_client_data - 113 - Client info history found.  group: 测试,  mark: 
+2025-05-28 06:38:44,344 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: [{'sessid': '50cb4e05e33dfbe0bb1f83dc81a6e1d80a6bbe55', 'hostname': 'root.kali', 'address': '192.168.7.131:33156', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:38:43', 'version': 'v2.6.18', 'status': 'true', 'group': '测试', 'mark': ''}]
+2025-05-28 06:38:46,194 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: [{'sessid': '50cb4e05e33dfbe0bb1f83dc81a6e1d80a6bbe55', 'hostname': 'root.kali', 'address': '192.168.7.131:33156', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:38:43', 'version': 'v2.6.18', 'status': 'true', 'group': '测试', 'mark': ''}]
+2025-05-28 06:38:48,081 - INFO - rssh.py - exec_command - 49 - ls: No RSSH clients connected
+2025-05-28 06:38:48,098 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: []
+2025-05-28 06:38:57,183 - INFO - rssh.py - exec_command - 49 - ls: 9041d308b8769e7701e832724e5abed16b3dcc04 2b11dac36bd06a2df06295e91bf0295f69efee82 root.kali 192.168.7.131:43884, owners: public, version: SSH-v2.6.18-2-gd042bc4-linux_amd64
+2025-05-28 06:38:57,185 - INFO - webhook.py - handle_client_data - 84 - Client Connect: {'Full': '{"Status":"connected", "ID":"9041d308b8769e7701e832724e5abed16b3dcc04","IP":"192.168.7.131:43884","HostName":"root.kali","Version":"SSH-v2.6.18-2-gd042bc4-linux_amd64","Timestamp":"2025-05-28T06:38:57.1"}'}
+2025-05-28 06:38:57,626 - INFO - ssh.py - exec_command - 74 - whoami: root
+2025-05-28 06:38:58,135 - ERROR - webhook.py - ip2region - 71 - 'countryCode'
+Traceback (most recent call last):
+  File "/app/module/webhook.py", line 68, in ip2region
+    country_code = json.loads(result)['countryCode']
+KeyError: 'countryCode'
+2025-05-28 06:38:58,143 - INFO - webhook.py - handle_client_data - 113 - Client info history found.  group: 测试,  mark: 
+2025-05-28 06:38:58,163 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: [{'sessid': '9041d308b8769e7701e832724e5abed16b3dcc04', 'hostname': 'root.kali', 'address': '192.168.7.131:43884', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:38:57', 'version': 'v2.6.18', 'status': 'true', 'group': '测试', 'mark': ''}]
+2025-05-28 06:38:59,581 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: [{'sessid': '9041d308b8769e7701e832724e5abed16b3dcc04', 'hostname': 'root.kali', 'address': '192.168.7.131:43884', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:38:57', 'version': 'v2.6.18', 'status': 'true', 'group': '测试', 'mark': ''}]
+2025-05-28 06:39:00,070 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: [{'sessid': '9041d308b8769e7701e832724e5abed16b3dcc04', 'hostname': 'root.kali', 'address': '192.168.7.131:43884', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:38:57', 'version': 'v2.6.18', 'status': 'true', 'group': '测试', 'mark': ''}]
+2025-05-28 06:39:00,294 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: [{'sessid': '9041d308b8769e7701e832724e5abed16b3dcc04', 'hostname': 'root.kali', 'address': '192.168.7.131:43884', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:38:57', 'version': 'v2.6.18', 'status': 'true', 'group': '测试', 'mark': ''}]
+2025-05-28 06:39:02,696 - INFO - rssh.py - exec_command - 49 - kill -y 9041d308b8769e7701e832724e5abed16b3dcc04: 9041d308b8769e7701e832724e5abed16b3dcc04 killed
+2025-05-28 06:39:02,738 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: [{'sessid': '9041d308b8769e7701e832724e5abed16b3dcc04', 'hostname': 'root.kali', 'address': '192.168.7.131:43884', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:38:57', 'version': 'v2.6.18', 'status': 'true', 'group': '测试', 'mark': ''}]
+2025-05-28 06:39:06,054 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: [{'sessid': '9041d308b8769e7701e832724e5abed16b3dcc04', 'hostname': 'root.kali', 'address': '192.168.7.131:43884', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:38:57', 'version': 'v2.6.18', 'status': 'true', 'group': '测试', 'mark': ''}]
+2025-05-28 06:39:06,629 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: [{'sessid': '9041d308b8769e7701e832724e5abed16b3dcc04', 'hostname': 'root.kali', 'address': '192.168.7.131:43884', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:38:57', 'version': 'v2.6.18', 'status': 'true', 'group': '测试', 'mark': ''}]
+2025-05-28 06:39:09,010 - INFO - rssh.py - exec_command - 49 - ls: No RSSH clients connected
+2025-05-28 06:39:09,032 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: []
+2025-05-28 06:44:27,574 - INFO - webhook.py - handle_client_data - 84 - Client Connect: {'Full': '{"Status":"connected","ID":"d29156936363b3a6b8c059b262512b044c76d98b","IP":"192.168.7.131:50288","HostName":"root.kali","Version":"SSH-v2.6.18-2-gd042bc4-linux_amd64","Timestamp":"2025-05-28T06:44:27.57144457Z"}', 'text': 'root.kali (d29156936363b3a6b8c059b262512b044c76d98b) SSH-v2.6.18-2-gd042bc4-linux_amd64 connected'}
+2025-05-28 06:44:28,036 - INFO - ssh.py - exec_command - 74 - whoami: 
+2025-05-28 06:44:28,036 - INFO - webhook.py - get_target_user - 35 - exec "whoami" to get username failed, now attempt to exec "id".
+2025-05-28 06:44:28,109 - INFO - ssh.py - exec_command - 74 - id: uid=0(root) gid=0(root) groups=0(root)
+2025-05-28 06:44:28,664 - ERROR - webhook.py - ip2region - 71 - 'countryCode'
+Traceback (most recent call last):
+  File "/app/module/webhook.py", line 68, in ip2region
+    country_code = json.loads(result)['countryCode']
+KeyError: 'countryCode'
+2025-05-28 06:44:28,746 - INFO - webhook.py - handle_client_data - 113 - Client info history found.  group: 测试,  mark: 
+2025-05-28 06:44:30,186 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: [{'sessid': 'd29156936363b3a6b8c059b262512b044c76d98b', 'hostname': 'root.kali', 'address': '192.168.7.131:50288', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:44:27', 'version': 'v2.6.18', 'status': 'true', 'group': '测试', 'mark': ''}]
+2025-05-28 06:44:32,240 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: [{'sessid': 'd29156936363b3a6b8c059b262512b044c76d98b', 'hostname': 'root.kali', 'address': '192.168.7.131:50288', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:44:27', 'version': 'v2.6.18', 'status': 'true', 'group': '测试', 'mark': ''}]
+2025-05-28 06:44:39,033 - INFO - rssh.py - exec_command - 49 - kill -y d29156936363b3a6b8c059b262512b044c76d98b: d29156936363b3a6b8c059b262512b044c76d98b killed
+2025-05-28 06:44:39,067 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: [{'sessid': 'd29156936363b3a6b8c059b262512b044c76d98b', 'hostname': 'root.kali', 'address': '192.168.7.131:50288', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:44:27', 'version': 'v2.6.18', 'status': 'true', 'group': '测试', 'mark': ''}]
+2025-05-28 06:44:41,067 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: [{'sessid': 'd29156936363b3a6b8c059b262512b044c76d98b', 'hostname': 'root.kali', 'address': '192.168.7.131:50288', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:44:27', 'version': 'v2.6.18', 'status': 'true', 'group': '测试', 'mark': ''}]
+2025-05-28 06:44:41,629 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: [{'sessid': 'd29156936363b3a6b8c059b262512b044c76d98b', 'hostname': 'root.kali', 'address': '192.168.7.131:50288', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:44:27', 'version': 'v2.6.18', 'status': 'true', 'group': '测试', 'mark': ''}]
+2025-05-28 06:44:42,138 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: [{'sessid': 'd29156936363b3a6b8c059b262512b044c76d98b', 'hostname': 'root.kali', 'address': '192.168.7.131:50288', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:44:27', 'version': 'v2.6.18', 'status': 'true', 'group': '测试', 'mark': ''}]
+2025-05-28 06:44:43,571 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: [{'sessid': 'd29156936363b3a6b8c059b262512b044c76d98b', 'hostname': 'root.kali', 'address': '192.168.7.131:50288', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:44:27', 'version': 'v2.6.18', 'status': 'true', 'group': '测试', 'mark': ''}]
+2025-05-28 06:44:44,048 - INFO - webhook.py - handle_client_data - 119 - Client Disconnect: {'Full': '{"Status":"disconnected","ID":"d29156936363b3a6b8c059b262512b044c76d98b","IP":"192.168.7.131:50288","HostName":"root.kali","Version":"SSH-v2.6.18-2-gd042bc4-linux_amd64","Timestamp":"2025-05-28T06:44:44.046163021Z"}', 'text': 'root.kali (d29156936363b3a6b8c059b262512b044c76d98b) SSH-v2.6.18-2-gd042bc4-linux_amd64 disconnected'}
+2025-05-28 06:44:44,205 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: [{'sessid': 'd29156936363b3a6b8c059b262512b044c76d98b', 'hostname': 'root.kali', 'address': '192.168.7.131:50288', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:44:44', 'version': 'v2.6.18', 'status': 'false', 'group': '测试', 'mark': ''}]
+2025-05-28 06:44:44,737 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: [{'sessid': 'd29156936363b3a6b8c059b262512b044c76d98b', 'hostname': 'root.kali', 'address': '192.168.7.131:50288', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:44:44', 'version': 'v2.6.18', 'status': 'false', 'group': '测试', 'mark': ''}]
+2025-05-28 06:44:47,425 - INFO - client.py - get_source_list - 25 - Redis Raw Client Data: []

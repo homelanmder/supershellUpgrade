@@ -1,0 +1,1175 @@
+[2025-05-28 03:05:44 +0000] [11] [INFO] Starting gunicorn 20.1.0
+[2025-05-28 03:05:44 +0000] [11] [INFO] Listening at: http://0.0.0.0:5000 (11)
+[2025-05-28 03:05:44 +0000] [11] [INFO] Using worker: gunicorn.workers.ggevent.GeventWorker
+[2025-05-28 03:05:44 +0000] [13] [INFO] Booting worker with pid: 13
+[2025-05-28 03:05:44 +0000] [14] [INFO] Booting worker with pid: 14
+[2025-05-28 03:05:44 +0000] [16] [INFO] Booting worker with pid: 16
+[2025-05-28 03:05:44 +0000] [15] [INFO] Booting worker with pid: 15
+[2025-05-28 03:05:44 +0000] [17] [INFO] Booting worker with pid: 17
+[2025-05-28 03:05:45 +0000] [14] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/ggevent.py", line 146, in init_process
+    super().init_process()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/local/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/app/main.py", line 5, in <module>
+    from flask import Flask, request, redirect
+  File "/usr/local/lib/python3.8/site-packages/flask/__init__.py", line 5, in <module>
+    from .app import Flask as Flask
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 30, in <module>
+    from werkzeug.urls import url_quote
+ImportError: cannot import name 'url_quote' from 'werkzeug.urls' (/usr/local/lib/python3.8/site-packages/werkzeug/urls.py)
+[2025-05-28 03:05:45 +0000] [14] [INFO] Worker exiting (pid: 14)
+[2025-05-28 03:05:45 +0000] [18] [INFO] Booting worker with pid: 18
+[2025-05-28 03:05:45 +0000] [13] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/ggevent.py", line 146, in init_process
+    super().init_process()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/local/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/app/main.py", line 5, in <module>
+    from flask import Flask, request, redirect
+  File "/usr/local/lib/python3.8/site-packages/flask/__init__.py", line 5, in <module>
+    from .app import Flask as Flask
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 30, in <module>
+    from werkzeug.urls import url_quote
+ImportError: cannot import name 'url_quote' from 'werkzeug.urls' (/usr/local/lib/python3.8/site-packages/werkzeug/urls.py)
+[2025-05-28 03:05:45 +0000] [13] [INFO] Worker exiting (pid: 13)
+[2025-05-28 03:05:45 +0000] [16] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/ggevent.py", line 146, in init_process
+    super().init_process()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/local/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/app/main.py", line 5, in <module>
+    from flask import Flask, request, redirect
+  File "/usr/local/lib/python3.8/site-packages/flask/__init__.py", line 5, in <module>
+    from .app import Flask as Flask
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 30, in <module>
+    from werkzeug.urls import url_quote
+ImportError: cannot import name 'url_quote' from 'werkzeug.urls' (/usr/local/lib/python3.8/site-packages/werkzeug/urls.py)
+[2025-05-28 03:05:45 +0000] [16] [INFO] Worker exiting (pid: 16)
+[2025-05-28 03:05:45 +0000] [19] [INFO] Booting worker with pid: 19
+[2025-05-28 03:05:45 +0000] [15] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/ggevent.py", line 146, in init_process
+    super().init_process()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/local/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/app/main.py", line 5, in <module>
+    from flask import Flask, request, redirect
+  File "/usr/local/lib/python3.8/site-packages/flask/__init__.py", line 5, in <module>
+    from .app import Flask as Flask
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 30, in <module>
+    from werkzeug.urls import url_quote
+ImportError: cannot import name 'url_quote' from 'werkzeug.urls' (/usr/local/lib/python3.8/site-packages/werkzeug/urls.py)
+[2025-05-28 03:05:45 +0000] [15] [INFO] Worker exiting (pid: 15)
+[2025-05-28 03:05:45 +0000] [20] [INFO] Booting worker with pid: 20
+[2025-05-28 03:05:45 +0000] [17] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/ggevent.py", line 146, in init_process
+    super().init_process()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/local/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/app/main.py", line 5, in <module>
+    from flask import Flask, request, redirect
+  File "/usr/local/lib/python3.8/site-packages/flask/__init__.py", line 5, in <module>
+    from .app import Flask as Flask
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 30, in <module>
+    from werkzeug.urls import url_quote
+ImportError: cannot import name 'url_quote' from 'werkzeug.urls' (/usr/local/lib/python3.8/site-packages/werkzeug/urls.py)
+[2025-05-28 03:05:45 +0000] [17] [INFO] Worker exiting (pid: 17)
+[2025-05-28 03:05:45 +0000] [21] [INFO] Booting worker with pid: 21
+[2025-05-28 03:05:45 +0000] [20] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/ggevent.py", line 146, in init_process
+    super().init_process()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/local/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/app/main.py", line 5, in <module>
+    from flask import Flask, request, redirect
+  File "/usr/local/lib/python3.8/site-packages/flask/__init__.py", line 5, in <module>
+    from .app import Flask as Flask
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 30, in <module>
+    from werkzeug.urls import url_quote
+ImportError: cannot import name 'url_quote' from 'werkzeug.urls' (/usr/local/lib/python3.8/site-packages/werkzeug/urls.py)
+[2025-05-28 03:05:45 +0000] [20] [INFO] Worker exiting (pid: 20)
+[2025-05-28 03:05:45 +0000] [18] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/ggevent.py", line 146, in init_process
+    super().init_process()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/local/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/app/main.py", line 5, in <module>
+    from flask import Flask, request, redirect
+  File "/usr/local/lib/python3.8/site-packages/flask/__init__.py", line 5, in <module>
+    from .app import Flask as Flask
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 30, in <module>
+    from werkzeug.urls import url_quote
+ImportError: cannot import name 'url_quote' from 'werkzeug.urls' (/usr/local/lib/python3.8/site-packages/werkzeug/urls.py)
+[2025-05-28 03:05:45 +0000] [18] [INFO] Worker exiting (pid: 18)
+[2025-05-28 03:05:45 +0000] [21] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/ggevent.py", line 146, in init_process
+    super().init_process()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/local/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/app/main.py", line 5, in <module>
+    from flask import Flask, request, redirect
+  File "/usr/local/lib/python3.8/site-packages/flask/__init__.py", line 5, in <module>
+    from .app import Flask as Flask
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 30, in <module>
+    from werkzeug.urls import url_quote
+ImportError: cannot import name 'url_quote' from 'werkzeug.urls' (/usr/local/lib/python3.8/site-packages/werkzeug/urls.py)
+[2025-05-28 03:05:45 +0000] [21] [INFO] Worker exiting (pid: 21)
+[2025-05-28 03:05:45 +0000] [19] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/ggevent.py", line 146, in init_process
+    super().init_process()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/local/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/app/main.py", line 5, in <module>
+    from flask import Flask, request, redirect
+  File "/usr/local/lib/python3.8/site-packages/flask/__init__.py", line 5, in <module>
+    from .app import Flask as Flask
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 30, in <module>
+    from werkzeug.urls import url_quote
+ImportError: cannot import name 'url_quote' from 'werkzeug.urls' (/usr/local/lib/python3.8/site-packages/werkzeug/urls.py)
+[2025-05-28 03:05:45 +0000] [19] [INFO] Worker exiting (pid: 19)
+[2025-05-28 03:09:41 +0000] [10] [INFO] Starting gunicorn 20.1.0
+[2025-05-28 03:09:41 +0000] [10] [INFO] Listening at: http://0.0.0.0:5000 (10)
+[2025-05-28 03:09:41 +0000] [10] [INFO] Using worker: gunicorn.workers.ggevent.GeventWorker
+[2025-05-28 03:09:41 +0000] [12] [INFO] Booting worker with pid: 12
+[2025-05-28 03:09:41 +0000] [13] [INFO] Booting worker with pid: 13
+[2025-05-28 03:09:41 +0000] [12] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/ggevent.py", line 146, in init_process
+    super().init_process()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/local/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/app/main.py", line 5, in <module>
+    from flask import Flask, request, redirect
+  File "/usr/local/lib/python3.8/site-packages/flask/__init__.py", line 5, in <module>
+    from .app import Flask as Flask
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 30, in <module>
+    from werkzeug.urls import url_quote
+ImportError: cannot import name 'url_quote' from 'werkzeug.urls' (/usr/local/lib/python3.8/site-packages/werkzeug/urls.py)
+[2025-05-28 03:09:41 +0000] [12] [INFO] Worker exiting (pid: 12)
+[2025-05-28 03:09:41 +0000] [14] [INFO] Booting worker with pid: 14
+[2025-05-28 03:09:41 +0000] [15] [INFO] Booting worker with pid: 15
+[2025-05-28 03:09:41 +0000] [13] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/ggevent.py", line 146, in init_process
+    super().init_process()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/local/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/app/main.py", line 5, in <module>
+    from flask import Flask, request, redirect
+  File "/usr/local/lib/python3.8/site-packages/flask/__init__.py", line 5, in <module>
+    from .app import Flask as Flask
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 30, in <module>
+    from werkzeug.urls import url_quote
+ImportError: cannot import name 'url_quote' from 'werkzeug.urls' (/usr/local/lib/python3.8/site-packages/werkzeug/urls.py)
+[2025-05-28 03:09:41 +0000] [13] [INFO] Worker exiting (pid: 13)
+[2025-05-28 03:09:41 +0000] [16] [INFO] Booting worker with pid: 16
+[2025-05-28 03:09:41 +0000] [14] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/ggevent.py", line 146, in init_process
+    super().init_process()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/local/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/app/main.py", line 5, in <module>
+    from flask import Flask, request, redirect
+  File "/usr/local/lib/python3.8/site-packages/flask/__init__.py", line 5, in <module>
+    from .app import Flask as Flask
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 30, in <module>
+    from werkzeug.urls import url_quote
+ImportError: cannot import name 'url_quote' from 'werkzeug.urls' (/usr/local/lib/python3.8/site-packages/werkzeug/urls.py)
+[2025-05-28 03:09:41 +0000] [15] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/ggevent.py", line 146, in init_process
+    super().init_process()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/local/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/app/main.py", line 5, in <module>
+    from flask import Flask, request, redirect
+  File "/usr/local/lib/python3.8/site-packages/flask/__init__.py", line 5, in <module>
+    from .app import Flask as Flask
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 30, in <module>
+    from werkzeug.urls import url_quote
+ImportError: cannot import name 'url_quote' from 'werkzeug.urls' (/usr/local/lib/python3.8/site-packages/werkzeug/urls.py)
+[2025-05-28 03:09:41 +0000] [14] [INFO] Worker exiting (pid: 14)
+[2025-05-28 03:09:41 +0000] [15] [INFO] Worker exiting (pid: 15)
+[2025-05-28 03:09:41 +0000] [17] [INFO] Booting worker with pid: 17
+[2025-05-28 03:09:41 +0000] [18] [INFO] Booting worker with pid: 18
+[2025-05-28 03:09:41 +0000] [16] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/ggevent.py", line 146, in init_process
+    super().init_process()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/local/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/app/main.py", line 5, in <module>
+    from flask import Flask, request, redirect
+  File "/usr/local/lib/python3.8/site-packages/flask/__init__.py", line 5, in <module>
+    from .app import Flask as Flask
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 30, in <module>
+    from werkzeug.urls import url_quote
+ImportError: cannot import name 'url_quote' from 'werkzeug.urls' (/usr/local/lib/python3.8/site-packages/werkzeug/urls.py)
+[2025-05-28 03:09:41 +0000] [16] [INFO] Worker exiting (pid: 16)
+[2025-05-28 03:09:41 +0000] [17] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/ggevent.py", line 146, in init_process
+    super().init_process()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/local/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/app/main.py", line 5, in <module>
+    from flask import Flask, request, redirect
+  File "/usr/local/lib/python3.8/site-packages/flask/__init__.py", line 5, in <module>
+    from .app import Flask as Flask
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 30, in <module>
+    from werkzeug.urls import url_quote
+ImportError: cannot import name 'url_quote' from 'werkzeug.urls' (/usr/local/lib/python3.8/site-packages/werkzeug/urls.py)
+[2025-05-28 03:09:41 +0000] [17] [INFO] Worker exiting (pid: 17)
+[2025-05-28 03:09:41 +0000] [19] [INFO] Booting worker with pid: 19
+[2025-05-28 03:09:42 +0000] [20] [INFO] Booting worker with pid: 20
+[2025-05-28 03:09:42 +0000] [18] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/ggevent.py", line 146, in init_process
+    super().init_process()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/local/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/app/main.py", line 5, in <module>
+    from flask import Flask, request, redirect
+  File "/usr/local/lib/python3.8/site-packages/flask/__init__.py", line 5, in <module>
+    from .app import Flask as Flask
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 30, in <module>
+    from werkzeug.urls import url_quote
+ImportError: cannot import name 'url_quote' from 'werkzeug.urls' (/usr/local/lib/python3.8/site-packages/werkzeug/urls.py)
+[2025-05-28 03:09:42 +0000] [18] [INFO] Worker exiting (pid: 18)
+[2025-05-28 03:09:42 +0000] [20] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/ggevent.py", line 146, in init_process
+    super().init_process()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/local/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/app/main.py", line 5, in <module>
+    from flask import Flask, request, redirect
+  File "/usr/local/lib/python3.8/site-packages/flask/__init__.py", line 5, in <module>
+    from .app import Flask as Flask
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 30, in <module>
+    from werkzeug.urls import url_quote
+ImportError: cannot import name 'url_quote' from 'werkzeug.urls' (/usr/local/lib/python3.8/site-packages/werkzeug/urls.py)
+[2025-05-28 03:09:42 +0000] [20] [INFO] Worker exiting (pid: 20)
+[2025-05-28 03:09:42 +0000] [19] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/ggevent.py", line 146, in init_process
+    super().init_process()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/usr/local/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/local/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/app/main.py", line 5, in <module>
+    from flask import Flask, request, redirect
+  File "/usr/local/lib/python3.8/site-packages/flask/__init__.py", line 5, in <module>
+    from .app import Flask as Flask
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 30, in <module>
+    from werkzeug.urls import url_quote
+ImportError: cannot import name 'url_quote' from 'werkzeug.urls' (/usr/local/lib/python3.8/site-packages/werkzeug/urls.py)
+[2025-05-28 03:09:42 +0000] [19] [INFO] Worker exiting (pid: 19)
+[2025-05-28 03:25:21 +0000] [11] [INFO] Starting gunicorn 20.1.0
+[2025-05-28 03:25:21 +0000] [11] [INFO] Listening at: http://0.0.0.0:5000 (11)
+[2025-05-28 03:25:21 +0000] [11] [INFO] Using worker: gunicorn.workers.ggevent.GeventWorker
+[2025-05-28 03:25:21 +0000] [13] [INFO] Booting worker with pid: 13
+[2025-05-28 03:25:21 +0000] [14] [INFO] Booting worker with pid: 14
+[2025-05-28 03:25:21 +0000] [15] [INFO] Booting worker with pid: 15
+[2025-05-28 03:25:21 +0000] [16] [INFO] Booting worker with pid: 16
+[2025-05-28 03:25:21 +0000] [17] [INFO] Booting worker with pid: 17
+[2025-05-28 03:25:22 +0000] [18] [INFO] Booting worker with pid: 18
+[2025-05-28 03:25:22 +0000] [19] [INFO] Booting worker with pid: 19
+[2025-05-28 03:25:22 +0000] [20] [INFO] Booting worker with pid: 20
+[2025-05-28 03:25:22 +0000] [21] [INFO] Booting worker with pid: 21
+[2025-05-28 03:33:47 +0000] [10] [INFO] Starting gunicorn 20.1.0
+[2025-05-28 03:33:47 +0000] [10] [INFO] Listening at: http://0.0.0.0:5000 (10)
+[2025-05-28 03:33:47 +0000] [10] [INFO] Using worker: gunicorn.workers.ggevent.GeventWorker
+[2025-05-28 03:33:47 +0000] [12] [INFO] Booting worker with pid: 12
+[2025-05-28 03:33:47 +0000] [13] [INFO] Booting worker with pid: 13
+[2025-05-28 03:33:47 +0000] [14] [INFO] Booting worker with pid: 14
+[2025-05-28 03:33:48 +0000] [15] [INFO] Booting worker with pid: 15
+[2025-05-28 03:33:48 +0000] [16] [INFO] Booting worker with pid: 16
+[2025-05-28 03:33:48 +0000] [17] [INFO] Booting worker with pid: 17
+[2025-05-28 03:33:48 +0000] [18] [INFO] Booting worker with pid: 18
+[2025-05-28 03:33:48 +0000] [19] [INFO] Booting worker with pid: 19
+[2025-05-28 03:33:48 +0000] [20] [INFO] Booting worker with pid: 20
+[2025-05-28 03:33:58,226] INFO in client: Redis Raw Client Data: []
+[2025-05-28 03:34:10,852] INFO in compiled: Make Client Receive Data: {'filename': 'test', 'address': '192.168.7.131', 'port': '3232', 'os_arch': 'android/amd64', 'address_proxy': '', 'port_proxy': '', 'flow': 'wss', 'upx': True, 'garble': True}
+[2025-05-28 03:34:11,053] INFO in compile: Make client Cmd: link --name test --goos android --goarch amd64 -s 192.168.7.131:3232 --upx --garble  --wss
+[2025-05-28 03:34:11,820] INFO in rssh: link --name test --goos android --goarch amd64 -s 192.168.7.131:3232 --upx --garble  --wss: Error: exit status 1
+android/amd64 requires external (cgo) linking, but cgo is not enabled
+[2025-05-28 03:34:28,932] INFO in compiled: Make Client Receive Data: {'filename': 'test', 'address': '192.168.7.131', 'port': '3232', 'os_arch': 'linux/amd64', 'address_proxy': '', 'port_proxy': '', 'flow': 'wss', 'upx': True, 'garble': True}
+[2025-05-28 03:34:29,131] INFO in compile: Make client Cmd: link --name test --goos linux --goarch amd64 -s 192.168.7.131:3232 --upx --garble  --wss
+[2025-05-28 03:35:21,894] INFO in rssh: link --name test --goos linux --goarch amd64 -s 192.168.7.131:3232 --upx --garble  --wss: http://:3232/test
+[2025-05-28 03:40:49 +0000] [11] [INFO] Starting gunicorn 20.1.0
+[2025-05-28 03:40:49 +0000] [11] [INFO] Listening at: http://0.0.0.0:5000 (11)
+[2025-05-28 03:40:49 +0000] [11] [INFO] Using worker: gunicorn.workers.ggevent.GeventWorker
+[2025-05-28 03:40:49 +0000] [13] [INFO] Booting worker with pid: 13
+[2025-05-28 03:40:49 +0000] [14] [INFO] Booting worker with pid: 14
+[2025-05-28 03:40:49 +0000] [15] [INFO] Booting worker with pid: 15
+[2025-05-28 03:40:49 +0000] [16] [INFO] Booting worker with pid: 16
+[2025-05-28 03:40:50 +0000] [17] [INFO] Booting worker with pid: 17
+[2025-05-28 03:40:50 +0000] [18] [INFO] Booting worker with pid: 18
+[2025-05-28 03:40:50 +0000] [19] [INFO] Booting worker with pid: 19
+[2025-05-28 03:40:50 +0000] [20] [INFO] Booting worker with pid: 20
+[2025-05-28 03:40:50 +0000] [21] [INFO] Booting worker with pid: 21
+[2025-05-28 03:41:06,456] ERROR in app: Exception on /supershell/compile/update [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/views/compiled.py", line 36, in update_compiled_client
+    source_list = get_compiled_clients_list()
+  File "/app/module/compile.py", line 28, in get_compiled_clients_list
+    cursor.execute(query)
+sqlite3.OperationalError: no such column: filename
+[2025-05-28 03:45:51 +0000] [10] [INFO] Starting gunicorn 20.1.0
+[2025-05-28 03:45:51 +0000] [10] [INFO] Listening at: http://0.0.0.0:5000 (10)
+[2025-05-28 03:45:51 +0000] [10] [INFO] Using worker: gunicorn.workers.ggevent.GeventWorker
+[2025-05-28 03:45:51 +0000] [12] [INFO] Booting worker with pid: 12
+[2025-05-28 03:45:51 +0000] [13] [INFO] Booting worker with pid: 13
+[2025-05-28 03:45:51 +0000] [14] [INFO] Booting worker with pid: 14
+[2025-05-28 03:45:51 +0000] [15] [INFO] Booting worker with pid: 15
+[2025-05-28 03:45:51 +0000] [16] [INFO] Booting worker with pid: 16
+[2025-05-28 03:45:51 +0000] [17] [INFO] Booting worker with pid: 17
+[2025-05-28 03:45:51 +0000] [18] [INFO] Booting worker with pid: 18
+[2025-05-28 03:45:51 +0000] [19] [INFO] Booting worker with pid: 19
+[2025-05-28 03:45:51 +0000] [20] [INFO] Booting worker with pid: 20
+[2025-05-28 03:46:10,985] ERROR in app: Exception on /supershell/compile/update [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/views/compiled.py", line 36, in update_compiled_client
+    source_list = get_compiled_clients_list()
+  File "/app/module/compile.py", line 24, in get_compiled_clients_list
+    cursor.execute("""
+sqlite3.OperationalError: no such table: compiled_clients
+[2025-05-28 04:16:39 +0000] [12] [INFO] Starting gunicorn 20.1.0
+[2025-05-28 04:16:39 +0000] [12] [INFO] Listening at: http://0.0.0.0:5000 (12)
+[2025-05-28 04:16:39 +0000] [12] [INFO] Using worker: gunicorn.workers.ggevent.GeventWorker
+[2025-05-28 04:16:39 +0000] [14] [INFO] Booting worker with pid: 14
+[2025-05-28 04:16:40 +0000] [15] [INFO] Booting worker with pid: 15
+[2025-05-28 04:16:40 +0000] [16] [INFO] Booting worker with pid: 16
+[2025-05-28 04:16:40 +0000] [17] [INFO] Booting worker with pid: 17
+[2025-05-28 04:16:40 +0000] [18] [INFO] Booting worker with pid: 18
+[2025-05-28 04:16:40 +0000] [19] [INFO] Booting worker with pid: 19
+[2025-05-28 04:16:40 +0000] [20] [INFO] Booting worker with pid: 20
+[2025-05-28 04:16:40 +0000] [21] [INFO] Booting worker with pid: 21
+[2025-05-28 04:16:40 +0000] [22] [INFO] Booting worker with pid: 22
+[2025-05-28 04:17:09,082] ERROR in app: Exception on /supershell/compile/update [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/views/compiled.py", line 36, in update_compiled_client
+    source_list = get_compiled_clients_list()
+  File "/app/module/compile.py", line 39, in get_compiled_clients_list
+    print(db_path,query)
+NameError: name 'query' is not defined
+[2025-05-28 04:18:46 +0000] [11] [INFO] Starting gunicorn 20.1.0
+[2025-05-28 04:18:46 +0000] [11] [INFO] Listening at: http://0.0.0.0:5000 (11)
+[2025-05-28 04:18:46 +0000] [11] [INFO] Using worker: gunicorn.workers.ggevent.GeventWorker
+[2025-05-28 04:18:46 +0000] [13] [INFO] Booting worker with pid: 13
+[2025-05-28 04:18:46 +0000] [14] [INFO] Booting worker with pid: 14
+[2025-05-28 04:18:46 +0000] [15] [INFO] Booting worker with pid: 15
+[2025-05-28 04:18:46 +0000] [16] [INFO] Booting worker with pid: 16
+[2025-05-28 04:18:46 +0000] [17] [INFO] Booting worker with pid: 17
+[2025-05-28 04:18:46 +0000] [18] [INFO] Booting worker with pid: 18
+[2025-05-28 04:18:46 +0000] [19] [INFO] Booting worker with pid: 19
+[2025-05-28 04:18:47 +0000] [20] [INFO] Booting worker with pid: 20
+[2025-05-28 04:18:47 +0000] [21] [INFO] Booting worker with pid: 21
+[2025-05-28 04:20:40,327] INFO in compiled: Make Client Receive Data: {'filename': 'test', 'address': '192.168.7.131', 'port': '3232', 'os_arch': 'freebsd/amd64', 'address_proxy': '', 'port_proxy': '', 'flow': 'ws', 'upx': False, 'garble': True}
+[2025-05-28 04:20:40,596] INFO in compile: Make client Cmd: link --name test --goos freebsd --goarch amd64 -s 192.168.7.131:3232  --garble  --ws
+[2025-05-28 04:21:38,667] INFO in rssh: link --name test --goos freebsd --goarch amd64 -s 192.168.7.131:3232  --garble  --ws: constraint failed: UNIQUE constraint failed: downloads.url_path (2067)
+[2025-05-28 04:21:51,667] INFO in compiled: Make Client Receive Data: {'filename': 'hello', 'address': '192.168.7.131', 'port': '3232', 'os_arch': 'freebsd/amd64', 'address_proxy': '', 'port_proxy': '', 'flow': 'ws', 'upx': False, 'garble': True}
+[2025-05-28 04:21:51,837] INFO in compile: Make client Cmd: link --name hello --goos freebsd --goarch amd64 -s 192.168.7.131:3232  --garble  --ws
+[2025-05-28 04:21:54,399] INFO in rssh: link --name hello --goos freebsd --goarch amd64 -s 192.168.7.131:3232  --garble  --ws: http://:3232/hello
+[2025-05-28 04:22:24,363] INFO in rssh: link -r test: Removed test
+[2025-05-28 04:22:26,551] INFO in client: Redis Raw Client Data: []
+[2025-05-28 04:22:30,995] ERROR in app: Exception on /supershell/compile/download/hello [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/views/compiled.py", line 46, in download_file
+    real_path = get_real_filename(secure_filename(filename))
+  File "/app/module/compile.py", line 90, in get_real_filename
+    real_path = compiled_clients_file_path + '/' + clients_dict[filename]['Path'].split('/')[-1]
+KeyError: 'hello'
+[2025-05-28 05:21:08 +0000] [10] [INFO] Starting gunicorn 20.1.0
+[2025-05-28 05:21:08 +0000] [10] [INFO] Listening at: http://0.0.0.0:5000 (10)
+[2025-05-28 05:21:08 +0000] [10] [INFO] Using worker: gunicorn.workers.ggevent.GeventWorker
+[2025-05-28 05:21:08 +0000] [12] [INFO] Booting worker with pid: 12
+[2025-05-28 05:21:08 +0000] [13] [INFO] Booting worker with pid: 13
+[2025-05-28 05:21:08 +0000] [14] [INFO] Booting worker with pid: 14
+[2025-05-28 05:21:08 +0000] [15] [INFO] Booting worker with pid: 15
+[2025-05-28 05:21:08 +0000] [16] [INFO] Booting worker with pid: 16
+[2025-05-28 05:21:08 +0000] [17] [INFO] Booting worker with pid: 17
+[2025-05-28 05:21:08 +0000] [18] [INFO] Booting worker with pid: 18
+[2025-05-28 05:21:08 +0000] [19] [INFO] Booting worker with pid: 19
+[2025-05-28 05:21:08 +0000] [20] [INFO] Booting worker with pid: 20
+[2025-05-28 05:21:26,775] ERROR in app: Exception on /supershell/compile/update [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/views/compiled.py", line 36, in update_compiled_client
+    source_list = get_compiled_clients_list()
+  File "/app/module/compile.py", line 34, in get_compiled_clients_list
+    rows = query_db(query)
+  File "/app/module/func.py", line 12, in query_db
+    db_path = compiled_clients_file_path + '/data.db'
+NameError: name 'compiled_clients_file_path' is not defined
+[2025-05-28 05:25:04 +0000] [10] [INFO] Starting gunicorn 20.1.0
+[2025-05-28 05:25:04 +0000] [10] [INFO] Listening at: http://0.0.0.0:5000 (10)
+[2025-05-28 05:25:04 +0000] [10] [INFO] Using worker: gunicorn.workers.ggevent.GeventWorker
+[2025-05-28 05:25:04 +0000] [12] [INFO] Booting worker with pid: 12
+[2025-05-28 05:25:04 +0000] [13] [INFO] Booting worker with pid: 13
+[2025-05-28 05:25:05 +0000] [14] [INFO] Booting worker with pid: 14
+[2025-05-28 05:25:05 +0000] [15] [INFO] Booting worker with pid: 15
+[2025-05-28 05:25:05 +0000] [16] [INFO] Booting worker with pid: 16
+[2025-05-28 05:25:05 +0000] [17] [INFO] Booting worker with pid: 17
+[2025-05-28 05:25:05 +0000] [18] [INFO] Booting worker with pid: 18
+[2025-05-28 05:25:05 +0000] [19] [INFO] Booting worker with pid: 19
+[2025-05-28 05:25:05 +0000] [25] [INFO] Booting worker with pid: 25
+[2025-05-28 05:25:52,899] ERROR in app: Exception on /supershell/compile/download/hello [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/views/compiled.py", line 46, in download_file
+    real_path = get_real_filename(secure_filename(filename))
+  File "/app/module/compile.py", line 81, in get_real_filename
+    rows = query_db(query)
+  File "/app/module/func.py", line 16, in query_db
+    cursor.execute( query)
+sqlite3.OperationalError: no such column: hello
+[2025-05-28 05:30:31 +0000] [10] [INFO] Starting gunicorn 20.1.0
+[2025-05-28 05:30:31 +0000] [10] [INFO] Listening at: http://0.0.0.0:5000 (10)
+[2025-05-28 05:30:31 +0000] [10] [INFO] Using worker: gunicorn.workers.ggevent.GeventWorker
+[2025-05-28 05:30:31 +0000] [12] [INFO] Booting worker with pid: 12
+[2025-05-28 05:30:31 +0000] [13] [INFO] Booting worker with pid: 13
+[2025-05-28 05:30:31 +0000] [14] [INFO] Booting worker with pid: 14
+[2025-05-28 05:30:31 +0000] [15] [INFO] Booting worker with pid: 15
+[2025-05-28 05:30:31 +0000] [16] [INFO] Booting worker with pid: 16
+[2025-05-28 05:30:31 +0000] [17] [INFO] Booting worker with pid: 17
+[2025-05-28 05:30:31 +0000] [18] [INFO] Booting worker with pid: 18
+[2025-05-28 05:30:31 +0000] [20] [INFO] Booting worker with pid: 20
+[2025-05-28 05:30:31 +0000] [19] [INFO] Booting worker with pid: 19
+[2025-05-28 05:30:39,695] ERROR in app: Exception on /supershell/compile/download/hello [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/views/compiled.py", line 46, in download_file
+    real_path = get_real_filename(secure_filename(filename))
+  File "/app/module/compile.py", line 86, in get_real_filename
+    return real_path
+NameError: name 'real_path' is not defined
+[2025-05-28 05:32:32 +0000] [11] [INFO] Starting gunicorn 20.1.0
+[2025-05-28 05:32:32 +0000] [11] [INFO] Listening at: http://0.0.0.0:5000 (11)
+[2025-05-28 05:32:32 +0000] [11] [INFO] Using worker: gunicorn.workers.ggevent.GeventWorker
+[2025-05-28 05:32:32 +0000] [13] [INFO] Booting worker with pid: 13
+[2025-05-28 05:32:32 +0000] [14] [INFO] Booting worker with pid: 14
+[2025-05-28 05:32:32 +0000] [15] [INFO] Booting worker with pid: 15
+[2025-05-28 05:32:32 +0000] [16] [INFO] Booting worker with pid: 16
+[2025-05-28 05:32:33 +0000] [17] [INFO] Booting worker with pid: 17
+[2025-05-28 05:32:33 +0000] [18] [INFO] Booting worker with pid: 18
+[2025-05-28 05:32:33 +0000] [19] [INFO] Booting worker with pid: 19
+[2025-05-28 05:32:33 +0000] [20] [INFO] Booting worker with pid: 20
+[2025-05-28 05:32:33 +0000] [21] [INFO] Booting worker with pid: 21
+[2025-05-28 05:32:37,365] ERROR in app: Exception on /supershell/compile/download/hello [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/views/compiled.py", line 49, in download_file
+    response.headers['content-length'] = os.stat(real_path).st_size
+FileNotFoundError: [Errno 2] No such file or directory: '/cache//data/cache/6af5ef2e532ec7ec427c0c1e7375311a'
+[2025-05-28 05:36:31 +0000] [11] [INFO] Starting gunicorn 20.1.0
+[2025-05-28 05:36:31 +0000] [11] [INFO] Listening at: http://0.0.0.0:5000 (11)
+[2025-05-28 05:36:31 +0000] [11] [INFO] Using worker: gunicorn.workers.ggevent.GeventWorker
+[2025-05-28 05:36:31 +0000] [13] [INFO] Booting worker with pid: 13
+[2025-05-28 05:36:31 +0000] [14] [INFO] Booting worker with pid: 14
+[2025-05-28 05:36:32 +0000] [15] [INFO] Booting worker with pid: 15
+[2025-05-28 05:36:32 +0000] [16] [INFO] Booting worker with pid: 16
+[2025-05-28 05:36:32 +0000] [17] [INFO] Booting worker with pid: 17
+[2025-05-28 05:36:32 +0000] [18] [INFO] Booting worker with pid: 18
+[2025-05-28 05:36:32 +0000] [19] [INFO] Booting worker with pid: 19
+[2025-05-28 05:36:32 +0000] [20] [INFO] Booting worker with pid: 20
+[2025-05-28 05:36:32 +0000] [21] [INFO] Booting worker with pid: 21
+[2025-05-28 05:36:44,976] ERROR in app: Exception on /supershell/compile/download/hello [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/views/compiled.py", line 46, in download_file
+    real_path = get_real_filename(secure_filename(filename))
+  File "/app/module/compile.py", line 83, in get_real_filename
+    real_path = rows[0][0].removeprefix("/data")
+AttributeError: 'str' object has no attribute 'removeprefix'
+[2025-05-28 05:41:21 +0000] [11] [INFO] Starting gunicorn 20.1.0
+[2025-05-28 05:41:21 +0000] [11] [INFO] Listening at: http://0.0.0.0:5000 (11)
+[2025-05-28 05:41:21 +0000] [11] [INFO] Using worker: gunicorn.workers.ggevent.GeventWorker
+[2025-05-28 05:41:21 +0000] [13] [INFO] Booting worker with pid: 13
+[2025-05-28 05:41:21 +0000] [14] [INFO] Booting worker with pid: 14
+[2025-05-28 05:41:21 +0000] [15] [INFO] Booting worker with pid: 15
+[2025-05-28 05:41:21 +0000] [16] [INFO] Booting worker with pid: 16
+[2025-05-28 05:41:21 +0000] [17] [INFO] Booting worker with pid: 17
+[2025-05-28 05:41:21 +0000] [18] [INFO] Booting worker with pid: 18
+[2025-05-28 05:41:21 +0000] [19] [INFO] Booting worker with pid: 19
+[2025-05-28 05:41:21 +0000] [20] [INFO] Booting worker with pid: 20
+[2025-05-28 05:41:21 +0000] [21] [INFO] Booting worker with pid: 21
+[2025-05-28 05:54:55 +0000] [11] [INFO] Starting gunicorn 20.1.0
+[2025-05-28 05:54:55 +0000] [11] [INFO] Listening at: http://0.0.0.0:5000 (11)
+[2025-05-28 05:54:55 +0000] [11] [INFO] Using worker: gunicorn.workers.ggevent.GeventWorker
+[2025-05-28 05:54:55 +0000] [13] [INFO] Booting worker with pid: 13
+[2025-05-28 05:54:55 +0000] [14] [INFO] Booting worker with pid: 14
+[2025-05-28 05:54:55 +0000] [15] [INFO] Booting worker with pid: 15
+[2025-05-28 05:54:56 +0000] [16] [INFO] Booting worker with pid: 16
+[2025-05-28 05:54:56 +0000] [17] [INFO] Booting worker with pid: 17
+[2025-05-28 05:54:56 +0000] [18] [INFO] Booting worker with pid: 18
+[2025-05-28 05:54:56 +0000] [19] [INFO] Booting worker with pid: 19
+[2025-05-28 05:54:56 +0000] [20] [INFO] Booting worker with pid: 20
+[2025-05-28 05:54:56 +0000] [21] [INFO] Booting worker with pid: 21
+[2025-05-28 05:55:17,753] ERROR in compile: Incorrect number of bindings supplied. The current statement uses 1, and there are 5 supplied.
+Traceback (most recent call last):
+  File "/app/module/compile.py", line 92, in deleteCompileClient
+    delete_db(filename)
+  File "/app/module/func.py", line 34, in delete_db
+    cursor.execute(query,filename)
+sqlite3.ProgrammingError: Incorrect number of bindings supplied. The current statement uses 1, and there are 5 supplied.
+[2025-05-28 05:59:04 +0000] [11] [INFO] Starting gunicorn 20.1.0
+[2025-05-28 05:59:04 +0000] [11] [INFO] Listening at: http://0.0.0.0:5000 (11)
+[2025-05-28 05:59:04 +0000] [11] [INFO] Using worker: gunicorn.workers.ggevent.GeventWorker
+[2025-05-28 05:59:04 +0000] [13] [INFO] Booting worker with pid: 13
+[2025-05-28 05:59:04 +0000] [14] [INFO] Booting worker with pid: 14
+[2025-05-28 05:59:04 +0000] [15] [INFO] Booting worker with pid: 15
+[2025-05-28 05:59:04 +0000] [16] [INFO] Booting worker with pid: 16
+[2025-05-28 05:59:05 +0000] [17] [INFO] Booting worker with pid: 17
+[2025-05-28 05:59:05 +0000] [18] [INFO] Booting worker with pid: 18
+[2025-05-28 05:59:05 +0000] [19] [INFO] Booting worker with pid: 19
+[2025-05-28 05:59:05 +0000] [20] [INFO] Booting worker with pid: 20
+[2025-05-28 05:59:05 +0000] [21] [INFO] Booting worker with pid: 21
+[2025-05-28 05:59:19,581] ERROR in compile: name 'os' is not defined
+Traceback (most recent call last):
+  File "/app/module/compile.py", line 92, in deleteCompileClient
+    delete_db(filename)
+  File "/app/module/func.py", line 40, in delete_db
+    os.remove(real_path)
+NameError: name 'os' is not defined
+[2025-05-28 06:01:03 +0000] [11] [INFO] Starting gunicorn 20.1.0
+[2025-05-28 06:01:03 +0000] [11] [INFO] Listening at: http://0.0.0.0:5000 (11)
+[2025-05-28 06:01:03 +0000] [11] [INFO] Using worker: gunicorn.workers.ggevent.GeventWorker
+[2025-05-28 06:01:03 +0000] [13] [INFO] Booting worker with pid: 13
+[2025-05-28 06:01:03 +0000] [14] [INFO] Booting worker with pid: 14
+[2025-05-28 06:01:03 +0000] [15] [INFO] Booting worker with pid: 15
+[2025-05-28 06:01:04 +0000] [16] [INFO] Booting worker with pid: 16
+[2025-05-28 06:01:04 +0000] [17] [INFO] Booting worker with pid: 17
+[2025-05-28 06:01:04 +0000] [18] [INFO] Booting worker with pid: 18
+[2025-05-28 06:01:04 +0000] [19] [INFO] Booting worker with pid: 19
+[2025-05-28 06:01:04 +0000] [20] [INFO] Booting worker with pid: 20
+[2025-05-28 06:01:04 +0000] [21] [INFO] Booting worker with pid: 21
+[2025-05-28 06:01:06,828] INFO in client: Redis Raw Client Data: []
+[2025-05-28 06:01:18,866] INFO in rssh: link -r hello: Unable to remove hello: remove /data/cache/6af5ef2e532ec7ec427c0c1e7375311a: no such file or directory
+[2025-05-28 06:02:29,103] INFO in rssh: link -r hello: No links match
+[2025-05-28 06:03:39,012] INFO in client: Redis Raw Client Data: []
+[2025-05-28 06:03:59,298] INFO in compiled: Make Client Receive Data: {'filename': 'test', 'address': '192.168.7.131', 'port': '3232', 'os_arch': 'linux/amd64', 'address_proxy': '', 'port_proxy': '', 'flow': 'ws', 'upx': True, 'garble': True}
+[2025-05-28 06:03:59,499] INFO in compile: Make client Cmd: link --name test --goos linux --goarch amd64 -s 192.168.7.131:3232 --upx --garble  --ws
+[2025-05-28 06:04:56,026] INFO in rssh: link --name test --goos linux --goarch amd64 -s 192.168.7.131:3232 --upx --garble  --ws: http://:3232/test
+[2025-05-28 06:06:22,357] INFO in client: Redis Raw Client Data: []
+[2025-05-28 06:06:23,078] INFO in client: Redis Raw Client Data: []
+[2025-05-28 06:06:23,931] INFO in client: Redis Raw Client Data: []
+[2025-05-28 06:06:24,338] INFO in client: Redis Raw Client Data: []
+[2025-05-28 06:06:24,512] INFO in client: Redis Raw Client Data: []
+[2025-05-28 06:06:24,674] INFO in client: Redis Raw Client Data: []
+[2025-05-28 06:09:18,840] INFO in client: Redis Raw Client Data: []
+[2025-05-28 06:12:46,685] INFO in client: Redis Raw Client Data: []
+[2025-05-28 06:25:23,136] INFO in rssh: ls: b88d377f96ee89046bb0433fafcf5d4cc069dc3a 2b11dac36bd06a2df06295e91bf0295f69efee82 root.kali 192.168.7.131:45224, owners: public, version: SSH-v2.6.18-2-gd042bc4-linux_amd64
+[2025-05-28 06:25:23,136] INFO in webhook: Client Connect: {'Full': '{"Status":"connected", "ID":"b88d377f96ee89046bb0433fafcf5d4cc069dc3a","IP":"192.168.7.131:45224","HostName":"root.kali","Version":"SSH-v2.6.18-2-gd042bc4-linux_amd64","Timestamp":"2025-05-28T06:25:23.1"}'}
+[2025-05-28 06:25:23,484] INFO in ssh: whoami: root
+[2025-05-28 06:25:24,160] ERROR in webhook: 'countryCode'
+Traceback (most recent call last):
+  File "/app/module/webhook.py", line 68, in ip2region
+    country_code = json.loads(result)['countryCode']
+KeyError: 'countryCode'
+[2025-05-28 06:25:24,198] INFO in webhook: No client info history found, set group and mark to default values
+[2025-05-28 06:25:24,245] INFO in client: Redis Raw Client Data: [{'sessid': 'b88d377f96ee89046bb0433fafcf5d4cc069dc3a', 'hostname': 'root.kali', 'address': '192.168.7.131:45224', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:25:23', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}]
+[2025-05-28 06:25:35,606] INFO in client: Redis Raw Client Data: [{'sessid': 'b88d377f96ee89046bb0433fafcf5d4cc069dc3a', 'hostname': 'root.kali', 'address': '192.168.7.131:45224', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:25:23', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}]
+[2025-05-28 06:26:33,302] INFO in client: Redis Raw Client Data: [{'sessid': 'b88d377f96ee89046bb0433fafcf5d4cc069dc3a', 'hostname': 'root.kali', 'address': '192.168.7.131:45224', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:25:23', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}]
+[2025-05-28 06:26:33,986] INFO in client: Redis Raw Client Data: [{'sessid': 'b88d377f96ee89046bb0433fafcf5d4cc069dc3a', 'hostname': 'root.kali', 'address': '192.168.7.131:45224', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:25:23', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}]
+[2025-05-28 06:27:14,318] INFO in client: Redis Raw Client Data: [{'sessid': 'b88d377f96ee89046bb0433fafcf5d4cc069dc3a', 'hostname': 'root.kali', 'address': '192.168.7.131:45224', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:25:23', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}]
+[2025-05-28 06:27:17,402] INFO in rssh: ls: b88d377f96ee89046bb0433fafcf5d4cc069dc3a 2b11dac36bd06a2df06295e91bf0295f69efee82 root.kali 192.168.7.131:45224, owners: public, version: SSH-v2.6.18-2-gd042bc4-linux_amd64
+[2025-05-28 06:27:17,407] INFO in webhook: Client Connect: {'Full': '{"Status":"connected", "ID":"b88d377f96ee89046bb0433fafcf5d4cc069dc3a","IP":"192.168.7.131:45224","HostName":"root.kali","Version":"SSH-v2.6.18-2-gd042bc4-linux_amd64","Timestamp":"2025-05-28T06:27:17.1"}'}
+[2025-05-28 06:27:17,812] INFO in ssh: whoami: root
+[2025-05-28 06:27:18,262] ERROR in webhook: 'countryCode'
+Traceback (most recent call last):
+  File "/app/module/webhook.py", line 68, in ip2region
+    country_code = json.loads(result)['countryCode']
+KeyError: 'countryCode'
+[2025-05-28 06:27:18,286] INFO in webhook: No client info history found, set group and mark to default values
+[2025-05-28 06:27:18,311] INFO in client: Redis Raw Client Data: [{'sessid': 'b88d377f96ee89046bb0433fafcf5d4cc069dc3a', 'hostname': 'root.kali', 'address': '192.168.7.131:45224', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:27:17', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}]
+[2025-05-28 06:27:19,849] INFO in client: Redis Raw Client Data: [{'sessid': 'b88d377f96ee89046bb0433fafcf5d4cc069dc3a', 'hostname': 'root.kali', 'address': '192.168.7.131:45224', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:27:17', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}]
+[2025-05-28 06:27:20,552] INFO in client: Redis Raw Client Data: [{'sessid': 'b88d377f96ee89046bb0433fafcf5d4cc069dc3a', 'hostname': 'root.kali', 'address': '192.168.7.131:45224', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:27:17', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}]
+[2025-05-28 06:32:27,607] INFO in client: Redis Raw Client Data: [{'sessid': 'b88d377f96ee89046bb0433fafcf5d4cc069dc3a', 'hostname': 'root.kali', 'address': '192.168.7.131:45224', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:27:17', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}]
+[2025-05-28 06:32:30,482] INFO in rssh: ls: No RSSH clients connected
+[2025-05-28 06:32:30,518] INFO in client: Redis Raw Client Data: []
+[2025-05-28 06:33:47,175] INFO in rssh: kill b88d377f96ee89046bb0433fafcf5d4cc069dc3a: Kill 1 clients? [N/y]
+[2025-05-28 06:33:47,175] INFO in rssh: kill b88d377f96ee89046bb0433fafcf5d4cc069dc3a: Kill 1 clients? [N/y]
+[2025-05-28 06:33:47,175] INFO in rssh: kill b88d377f96ee89046bb0433fafcf5d4cc069dc3a: Kill 1 clients? [N/y]
+[2025-05-28 06:35:21 +0000] [11] [INFO] Starting gunicorn 20.1.0
+[2025-05-28 06:35:21 +0000] [11] [INFO] Listening at: http://0.0.0.0:5000 (11)
+[2025-05-28 06:35:21 +0000] [11] [INFO] Using worker: gunicorn.workers.ggevent.GeventWorker
+[2025-05-28 06:35:21 +0000] [13] [INFO] Booting worker with pid: 13
+[2025-05-28 06:35:21 +0000] [14] [INFO] Booting worker with pid: 14
+[2025-05-28 06:35:21 +0000] [15] [INFO] Booting worker with pid: 15
+[2025-05-28 06:35:21 +0000] [16] [INFO] Booting worker with pid: 16
+[2025-05-28 06:35:21 +0000] [17] [INFO] Booting worker with pid: 17
+[2025-05-28 06:35:21 +0000] [18] [INFO] Booting worker with pid: 18
+[2025-05-28 06:35:21 +0000] [20] [INFO] Booting worker with pid: 20
+[2025-05-28 06:35:21 +0000] [19] [INFO] Booting worker with pid: 19
+[2025-05-28 06:35:21 +0000] [21] [INFO] Booting worker with pid: 21
+[2025-05-28 06:36:32,488] INFO in client: Redis Raw Client Data: [{'sessid': 'b88d377f96ee89046bb0433fafcf5d4cc069dc3a', 'hostname': 'root.kali', 'address': '192.168.7.131:45224', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:27:17', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}]
+[2025-05-28 06:36:33,785] INFO in client: Redis Raw Client Data: [{'sessid': 'b88d377f96ee89046bb0433fafcf5d4cc069dc3a', 'hostname': 'root.kali', 'address': '192.168.7.131:45224', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:27:17', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}]
+[2025-05-28 06:36:36,649] INFO in rssh: kill -y b88d377f96ee89046bb0433fafcf5d4cc069dc3a: No clients matched 'b88d377f96ee89046bb0433fafcf5d4cc069dc3a'
+[2025-05-28 06:36:41,308] INFO in client: Redis Raw Client Data: [{'sessid': 'b88d377f96ee89046bb0433fafcf5d4cc069dc3a', 'hostname': 'root.kali', 'address': '192.168.7.131:45224', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:27:17', 'version': 'v2.6.18', 'status': 'false', 'group': '-', 'mark': ''}]
+[2025-05-28 06:36:43,897] INFO in client: Redis Raw Client Data: []
+[2025-05-28 06:36:45,346] INFO in client: Redis Raw Client Data: []
+[2025-05-28 06:36:50,566] INFO in client: Redis Raw Client Data: []
+[2025-05-28 06:36:51,193] INFO in client: Redis Raw Client Data: []
+[2025-05-28 06:36:52,796] INFO in client: Redis Raw Client Data: []
+[2025-05-28 06:36:52,991] INFO in client: Redis Raw Client Data: []
+[2025-05-28 06:36:55,120] INFO in rssh: ls: c5d9d760b870ffec24affcc00863c5fafacf213b 2b11dac36bd06a2df06295e91bf0295f69efee82 root.kali 192.168.7.131:34652, owners: public, version: SSH-v2.6.18-2-gd042bc4-linux_amd64
+dc7f3acb62191f9391f3d4982ba34f204ffc96d3 2b11dac36bd06a2df06295e91bf0295f69efee82 root.kali 192.168.7.131:43386, owners: public, version: SSH-v2.6.18-2-gd042bc4-linux_amd64
+[2025-05-28 06:36:55,161] INFO in webhook: Client Connect: {'Full': '{"Status":"connected", "ID":"c5d9d760b870ffec24affcc00863c5fafacf213b","IP":"192.168.7.131:34652","HostName":"root.kali","Version":"SSH-v2.6.18-2-gd042bc4-linux_amd64","Timestamp":"2025-05-28T06:36:55.1"}'}
+[2025-05-28 06:36:55,579] INFO in ssh: whoami: root
+[2025-05-28 06:36:56,032] ERROR in webhook: 'countryCode'
+Traceback (most recent call last):
+  File "/app/module/webhook.py", line 68, in ip2region
+    country_code = json.loads(result)['countryCode']
+KeyError: 'countryCode'
+[2025-05-28 06:36:56,102] INFO in webhook: No client info history found, set group and mark to default values
+[2025-05-28 06:36:56,102] INFO in webhook: Client Connect: {'Full': '{"Status":"connected", "ID":"dc7f3acb62191f9391f3d4982ba34f204ffc96d3","IP":"192.168.7.131:43386","HostName":"root.kali","Version":"SSH-v2.6.18-2-gd042bc4-linux_amd64","Timestamp":"2025-05-28T06:36:56.1"}'}
+[2025-05-28 06:36:56,492] INFO in ssh: whoami: root
+[2025-05-28 06:36:56,978] ERROR in webhook: 'countryCode'
+Traceback (most recent call last):
+  File "/app/module/webhook.py", line 68, in ip2region
+    country_code = json.loads(result)['countryCode']
+KeyError: 'countryCode'
+[2025-05-28 06:36:57,047] INFO in webhook: No client info history found, set group and mark to default values
+[2025-05-28 06:36:57,086] INFO in client: Redis Raw Client Data: [{'sessid': 'dc7f3acb62191f9391f3d4982ba34f204ffc96d3', 'hostname': 'root.kali', 'address': '192.168.7.131:43386', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:36:56', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}, {'sessid': 'c5d9d760b870ffec24affcc00863c5fafacf213b', 'hostname': 'root.kali', 'address': '192.168.7.131:34652', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:36:55', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}]
+[2025-05-28 06:36:59,357] INFO in client: Redis Raw Client Data: [{'sessid': 'dc7f3acb62191f9391f3d4982ba34f204ffc96d3', 'hostname': 'root.kali', 'address': '192.168.7.131:43386', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:36:56', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}, {'sessid': 'c5d9d760b870ffec24affcc00863c5fafacf213b', 'hostname': 'root.kali', 'address': '192.168.7.131:34652', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:36:55', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}]
+[2025-05-28 06:37:01,922] INFO in rssh: kill -y dc7f3acb62191f9391f3d4982ba34f204ffc96d3: dc7f3acb62191f9391f3d4982ba34f204ffc96d3 killed
+[2025-05-28 06:37:01,956] INFO in client: Redis Raw Client Data: [{'sessid': 'dc7f3acb62191f9391f3d4982ba34f204ffc96d3', 'hostname': 'root.kali', 'address': '192.168.7.131:43386', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:36:56', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}, {'sessid': 'c5d9d760b870ffec24affcc00863c5fafacf213b', 'hostname': 'root.kali', 'address': '192.168.7.131:34652', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:36:55', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}]
+[2025-05-28 06:37:05,368] INFO in client: Redis Raw Client Data: [{'sessid': 'dc7f3acb62191f9391f3d4982ba34f204ffc96d3', 'hostname': 'root.kali', 'address': '192.168.7.131:43386', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:36:56', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}, {'sessid': 'c5d9d760b870ffec24affcc00863c5fafacf213b', 'hostname': 'root.kali', 'address': '192.168.7.131:34652', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:36:55', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}]
+[2025-05-28 06:37:07,380] INFO in client: Redis Raw Client Data: [{'sessid': 'dc7f3acb62191f9391f3d4982ba34f204ffc96d3', 'hostname': 'root.kali', 'address': '192.168.7.131:43386', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:36:56', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}, {'sessid': 'c5d9d760b870ffec24affcc00863c5fafacf213b', 'hostname': 'root.kali', 'address': '192.168.7.131:34652', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:36:55', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}]
+[2025-05-28 06:37:07,581] INFO in client: Redis Raw Client Data: [{'sessid': 'dc7f3acb62191f9391f3d4982ba34f204ffc96d3', 'hostname': 'root.kali', 'address': '192.168.7.131:43386', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:36:56', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}, {'sessid': 'c5d9d760b870ffec24affcc00863c5fafacf213b', 'hostname': 'root.kali', 'address': '192.168.7.131:34652', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:36:55', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}]
+[2025-05-28 06:37:07,765] INFO in client: Redis Raw Client Data: [{'sessid': 'dc7f3acb62191f9391f3d4982ba34f204ffc96d3', 'hostname': 'root.kali', 'address': '192.168.7.131:43386', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:36:56', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}, {'sessid': 'c5d9d760b870ffec24affcc00863c5fafacf213b', 'hostname': 'root.kali', 'address': '192.168.7.131:34652', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:36:55', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}]
+[2025-05-28 06:37:07,950] INFO in client: Redis Raw Client Data: [{'sessid': 'dc7f3acb62191f9391f3d4982ba34f204ffc96d3', 'hostname': 'root.kali', 'address': '192.168.7.131:43386', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:36:56', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}, {'sessid': 'c5d9d760b870ffec24affcc00863c5fafacf213b', 'hostname': 'root.kali', 'address': '192.168.7.131:34652', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:36:55', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}]
+[2025-05-28 06:37:08,103] INFO in client: Redis Raw Client Data: [{'sessid': 'dc7f3acb62191f9391f3d4982ba34f204ffc96d3', 'hostname': 'root.kali', 'address': '192.168.7.131:43386', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:36:56', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}, {'sessid': 'c5d9d760b870ffec24affcc00863c5fafacf213b', 'hostname': 'root.kali', 'address': '192.168.7.131:34652', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:36:55', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}]
+[2025-05-28 06:37:10,121] INFO in rssh: ls: c5d9d760b870ffec24affcc00863c5fafacf213b 2b11dac36bd06a2df06295e91bf0295f69efee82 root.kali 192.168.7.131:34652, owners: public, version: SSH-v2.6.18-2-gd042bc4-linux_amd64
+[2025-05-28 06:37:10,125] INFO in webhook: Client Connect: {'Full': '{"Status":"connected", "ID":"c5d9d760b870ffec24affcc00863c5fafacf213b","IP":"192.168.7.131:34652","HostName":"root.kali","Version":"SSH-v2.6.18-2-gd042bc4-linux_amd64","Timestamp":"2025-05-28T06:37:10.1"}'}
+[2025-05-28 06:37:10,478] INFO in ssh: whoami: 
+[2025-05-28 06:37:10,479] INFO in webhook: exec "whoami" to get username failed, now attempt to exec "id".
+[2025-05-28 06:37:10,566] INFO in ssh: id: uid=0(root) gid=0(root) groups=0(root)
+[2025-05-28 06:37:11,054] ERROR in webhook: 'countryCode'
+Traceback (most recent call last):
+  File "/app/module/webhook.py", line 68, in ip2region
+    country_code = json.loads(result)['countryCode']
+KeyError: 'countryCode'
+[2025-05-28 06:37:11,064] INFO in webhook: No client info history found, set group and mark to default values
+[2025-05-28 06:37:11,112] INFO in client: Redis Raw Client Data: [{'sessid': 'c5d9d760b870ffec24affcc00863c5fafacf213b', 'hostname': 'root.kali', 'address': '192.168.7.131:34652', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:37:10', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}]
+[2025-05-28 06:37:13,577] INFO in rssh: kill -y c5d9d760b870ffec24affcc00863c5fafacf213b: c5d9d760b870ffec24affcc00863c5fafacf213b killed
+[2025-05-28 06:37:13,612] INFO in client: Redis Raw Client Data: [{'sessid': 'c5d9d760b870ffec24affcc00863c5fafacf213b', 'hostname': 'root.kali', 'address': '192.168.7.131:34652', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:37:10', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}]
+[2025-05-28 06:37:15,777] INFO in rssh: ls: c5d9d760b870ffec24affcc00863c5fafacf213b 2b11dac36bd06a2df06295e91bf0295f69efee82 root.kali 192.168.7.131:34652, owners: public, version: SSH-v2.6.18-2-gd042bc4-linux_amd64
+[2025-05-28 06:37:15,780] INFO in webhook: Client Connect: {'Full': '{"Status":"connected", "ID":"c5d9d760b870ffec24affcc00863c5fafacf213b","IP":"192.168.7.131:34652","HostName":"root.kali","Version":"SSH-v2.6.18-2-gd042bc4-linux_amd64","Timestamp":"2025-05-28T06:37:15.1"}'}
+[2025-05-28 06:37:16,258] INFO in ssh: whoami: root
+[2025-05-28 06:37:16,705] ERROR in webhook: 'countryCode'
+Traceback (most recent call last):
+  File "/app/module/webhook.py", line 68, in ip2region
+    country_code = json.loads(result)['countryCode']
+KeyError: 'countryCode'
+[2025-05-28 06:37:16,719] INFO in webhook: No client info history found, set group and mark to default values
+[2025-05-28 06:37:16,743] INFO in client: Redis Raw Client Data: [{'sessid': 'c5d9d760b870ffec24affcc00863c5fafacf213b', 'hostname': 'root.kali', 'address': '192.168.7.131:34652', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:37:15', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}]
+[2025-05-28 06:37:19,245] INFO in rssh: ls: No RSSH clients connected
+[2025-05-28 06:37:19,263] INFO in client: Redis Raw Client Data: []
+[2025-05-28 06:38:25,001] INFO in client: Redis Raw Client Data: []
+[2025-05-28 06:38:26,967] INFO in rssh: ls: 50cb4e05e33dfbe0bb1f83dc81a6e1d80a6bbe55 2b11dac36bd06a2df06295e91bf0295f69efee82 root.kali 192.168.7.131:33156, owners: public, version: SSH-v2.6.18-2-gd042bc4-linux_amd64
+[2025-05-28 06:38:26,969] INFO in webhook: Client Connect: {'Full': '{"Status":"connected", "ID":"50cb4e05e33dfbe0bb1f83dc81a6e1d80a6bbe55","IP":"192.168.7.131:33156","HostName":"root.kali","Version":"SSH-v2.6.18-2-gd042bc4-linux_amd64","Timestamp":"2025-05-28T06:38:26.1"}'}
+[2025-05-28 06:38:27,393] INFO in ssh: whoami: root
+[2025-05-28 06:38:27,944] ERROR in webhook: 'countryCode'
+Traceback (most recent call last):
+  File "/app/module/webhook.py", line 68, in ip2region
+    country_code = json.loads(result)['countryCode']
+KeyError: 'countryCode'
+[2025-05-28 06:38:27,987] INFO in webhook: No client info history found, set group and mark to default values
+[2025-05-28 06:38:28,009] INFO in client: Redis Raw Client Data: [{'sessid': '50cb4e05e33dfbe0bb1f83dc81a6e1d80a6bbe55', 'hostname': 'root.kali', 'address': '192.168.7.131:33156', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:38:26', 'version': 'v2.6.18', 'status': 'true', 'group': '-', 'mark': ''}]
+[2025-05-28 06:38:33,239] INFO in client: Redis Raw Client Data: [{'sessid': '50cb4e05e33dfbe0bb1f83dc81a6e1d80a6bbe55', 'hostname': 'root.kali', 'address': '192.168.7.131:33156', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:38:26', 'version': 'v2.6.18', 'status': 'true', 'group': '测试', 'mark': ''}]
+[2025-05-28 06:38:35,466] INFO in client: Redis Raw Client Data: [{'sessid': '50cb4e05e33dfbe0bb1f83dc81a6e1d80a6bbe55', 'hostname': 'root.kali', 'address': '192.168.7.131:33156', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:38:26', 'version': 'v2.6.18', 'status': 'true', 'group': '测试', 'mark': ''}]
+[2025-05-28 06:38:39,266] INFO in rssh: kill -y 50cb4e05e33dfbe0bb1f83dc81a6e1d80a6bbe55: 50cb4e05e33dfbe0bb1f83dc81a6e1d80a6bbe55 killed
+[2025-05-28 06:38:39,291] INFO in client: Redis Raw Client Data: [{'sessid': '50cb4e05e33dfbe0bb1f83dc81a6e1d80a6bbe55', 'hostname': 'root.kali', 'address': '192.168.7.131:33156', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:38:26', 'version': 'v2.6.18', 'status': 'true', 'group': '测试', 'mark': ''}]
+[2025-05-28 06:38:43,350] INFO in rssh: ls: 50cb4e05e33dfbe0bb1f83dc81a6e1d80a6bbe55 2b11dac36bd06a2df06295e91bf0295f69efee82 root.kali 192.168.7.131:33156, owners: public, version: SSH-v2.6.18-2-gd042bc4-linux_amd64
+[2025-05-28 06:38:43,356] INFO in webhook: Client Connect: {'Full': '{"Status":"connected", "ID":"50cb4e05e33dfbe0bb1f83dc81a6e1d80a6bbe55","IP":"192.168.7.131:33156","HostName":"root.kali","Version":"SSH-v2.6.18-2-gd042bc4-linux_amd64","Timestamp":"2025-05-28T06:38:43.1"}'}
+[2025-05-28 06:38:43,805] INFO in ssh: whoami: root
+[2025-05-28 06:38:44,304] ERROR in webhook: 'countryCode'
+Traceback (most recent call last):
+  File "/app/module/webhook.py", line 68, in ip2region
+    country_code = json.loads(result)['countryCode']
+KeyError: 'countryCode'
+[2025-05-28 06:38:44,324] INFO in webhook: Client info history found.  group: 测试,  mark: 
+[2025-05-28 06:38:44,344] INFO in client: Redis Raw Client Data: [{'sessid': '50cb4e05e33dfbe0bb1f83dc81a6e1d80a6bbe55', 'hostname': 'root.kali', 'address': '192.168.7.131:33156', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:38:43', 'version': 'v2.6.18', 'status': 'true', 'group': '测试', 'mark': ''}]
+[2025-05-28 06:38:46,194] INFO in client: Redis Raw Client Data: [{'sessid': '50cb4e05e33dfbe0bb1f83dc81a6e1d80a6bbe55', 'hostname': 'root.kali', 'address': '192.168.7.131:33156', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:38:43', 'version': 'v2.6.18', 'status': 'true', 'group': '测试', 'mark': ''}]
+[2025-05-28 06:38:48,081] INFO in rssh: ls: No RSSH clients connected
+[2025-05-28 06:38:48,098] INFO in client: Redis Raw Client Data: []
+[2025-05-28 06:38:57,183] INFO in rssh: ls: 9041d308b8769e7701e832724e5abed16b3dcc04 2b11dac36bd06a2df06295e91bf0295f69efee82 root.kali 192.168.7.131:43884, owners: public, version: SSH-v2.6.18-2-gd042bc4-linux_amd64
+[2025-05-28 06:38:57,185] INFO in webhook: Client Connect: {'Full': '{"Status":"connected", "ID":"9041d308b8769e7701e832724e5abed16b3dcc04","IP":"192.168.7.131:43884","HostName":"root.kali","Version":"SSH-v2.6.18-2-gd042bc4-linux_amd64","Timestamp":"2025-05-28T06:38:57.1"}'}
+[2025-05-28 06:38:57,626] INFO in ssh: whoami: root
+[2025-05-28 06:38:58,135] ERROR in webhook: 'countryCode'
+Traceback (most recent call last):
+  File "/app/module/webhook.py", line 68, in ip2region
+    country_code = json.loads(result)['countryCode']
+KeyError: 'countryCode'
+[2025-05-28 06:38:58,143] INFO in webhook: Client info history found.  group: 测试,  mark: 
+[2025-05-28 06:38:58,163] INFO in client: Redis Raw Client Data: [{'sessid': '9041d308b8769e7701e832724e5abed16b3dcc04', 'hostname': 'root.kali', 'address': '192.168.7.131:43884', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:38:57', 'version': 'v2.6.18', 'status': 'true', 'group': '测试', 'mark': ''}]
+[2025-05-28 06:38:59,581] INFO in client: Redis Raw Client Data: [{'sessid': '9041d308b8769e7701e832724e5abed16b3dcc04', 'hostname': 'root.kali', 'address': '192.168.7.131:43884', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:38:57', 'version': 'v2.6.18', 'status': 'true', 'group': '测试', 'mark': ''}]
+[2025-05-28 06:39:00,070] INFO in client: Redis Raw Client Data: [{'sessid': '9041d308b8769e7701e832724e5abed16b3dcc04', 'hostname': 'root.kali', 'address': '192.168.7.131:43884', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:38:57', 'version': 'v2.6.18', 'status': 'true', 'group': '测试', 'mark': ''}]
+[2025-05-28 06:39:00,294] INFO in client: Redis Raw Client Data: [{'sessid': '9041d308b8769e7701e832724e5abed16b3dcc04', 'hostname': 'root.kali', 'address': '192.168.7.131:43884', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:38:57', 'version': 'v2.6.18', 'status': 'true', 'group': '测试', 'mark': ''}]
+[2025-05-28 06:39:02,696] INFO in rssh: kill -y 9041d308b8769e7701e832724e5abed16b3dcc04: 9041d308b8769e7701e832724e5abed16b3dcc04 killed
+[2025-05-28 06:39:02,738] INFO in client: Redis Raw Client Data: [{'sessid': '9041d308b8769e7701e832724e5abed16b3dcc04', 'hostname': 'root.kali', 'address': '192.168.7.131:43884', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:38:57', 'version': 'v2.6.18', 'status': 'true', 'group': '测试', 'mark': ''}]
+[2025-05-28 06:39:06,054] INFO in client: Redis Raw Client Data: [{'sessid': '9041d308b8769e7701e832724e5abed16b3dcc04', 'hostname': 'root.kali', 'address': '192.168.7.131:43884', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:38:57', 'version': 'v2.6.18', 'status': 'true', 'group': '测试', 'mark': ''}]
+[2025-05-28 06:39:06,629] INFO in client: Redis Raw Client Data: [{'sessid': '9041d308b8769e7701e832724e5abed16b3dcc04', 'hostname': 'root.kali', 'address': '192.168.7.131:43884', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:38:57', 'version': 'v2.6.18', 'status': 'true', 'group': '测试', 'mark': ''}]
+[2025-05-28 06:39:09,010] INFO in rssh: ls: No RSSH clients connected
+[2025-05-28 06:39:09,032] INFO in client: Redis Raw Client Data: []
+[2025-05-28 06:44:27,574] INFO in webhook: Client Connect: {'Full': '{"Status":"connected","ID":"d29156936363b3a6b8c059b262512b044c76d98b","IP":"192.168.7.131:50288","HostName":"root.kali","Version":"SSH-v2.6.18-2-gd042bc4-linux_amd64","Timestamp":"2025-05-28T06:44:27.57144457Z"}', 'text': 'root.kali (d29156936363b3a6b8c059b262512b044c76d98b) SSH-v2.6.18-2-gd042bc4-linux_amd64 connected'}
+[2025-05-28 06:44:28,036] INFO in ssh: whoami: 
+[2025-05-28 06:44:28,036] INFO in webhook: exec "whoami" to get username failed, now attempt to exec "id".
+[2025-05-28 06:44:28,109] INFO in ssh: id: uid=0(root) gid=0(root) groups=0(root)
+[2025-05-28 06:44:28,664] ERROR in webhook: 'countryCode'
+Traceback (most recent call last):
+  File "/app/module/webhook.py", line 68, in ip2region
+    country_code = json.loads(result)['countryCode']
+KeyError: 'countryCode'
+[2025-05-28 06:44:28,746] INFO in webhook: Client info history found.  group: 测试,  mark: 
+[2025-05-28 06:44:30,186] INFO in client: Redis Raw Client Data: [{'sessid': 'd29156936363b3a6b8c059b262512b044c76d98b', 'hostname': 'root.kali', 'address': '192.168.7.131:50288', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:44:27', 'version': 'v2.6.18', 'status': 'true', 'group': '测试', 'mark': ''}]
+[2025-05-28 06:44:32,240] INFO in client: Redis Raw Client Data: [{'sessid': 'd29156936363b3a6b8c059b262512b044c76d98b', 'hostname': 'root.kali', 'address': '192.168.7.131:50288', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:44:27', 'version': 'v2.6.18', 'status': 'true', 'group': '测试', 'mark': ''}]
+[2025-05-28 06:44:39,033] INFO in rssh: kill -y d29156936363b3a6b8c059b262512b044c76d98b: d29156936363b3a6b8c059b262512b044c76d98b killed
+[2025-05-28 06:44:39,067] INFO in client: Redis Raw Client Data: [{'sessid': 'd29156936363b3a6b8c059b262512b044c76d98b', 'hostname': 'root.kali', 'address': '192.168.7.131:50288', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:44:27', 'version': 'v2.6.18', 'status': 'true', 'group': '测试', 'mark': ''}]
+[2025-05-28 06:44:41,067] INFO in client: Redis Raw Client Data: [{'sessid': 'd29156936363b3a6b8c059b262512b044c76d98b', 'hostname': 'root.kali', 'address': '192.168.7.131:50288', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:44:27', 'version': 'v2.6.18', 'status': 'true', 'group': '测试', 'mark': ''}]
+[2025-05-28 06:44:41,629] INFO in client: Redis Raw Client Data: [{'sessid': 'd29156936363b3a6b8c059b262512b044c76d98b', 'hostname': 'root.kali', 'address': '192.168.7.131:50288', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:44:27', 'version': 'v2.6.18', 'status': 'true', 'group': '测试', 'mark': ''}]
+[2025-05-28 06:44:42,138] INFO in client: Redis Raw Client Data: [{'sessid': 'd29156936363b3a6b8c059b262512b044c76d98b', 'hostname': 'root.kali', 'address': '192.168.7.131:50288', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:44:27', 'version': 'v2.6.18', 'status': 'true', 'group': '测试', 'mark': ''}]
+[2025-05-28 06:44:43,571] INFO in client: Redis Raw Client Data: [{'sessid': 'd29156936363b3a6b8c059b262512b044c76d98b', 'hostname': 'root.kali', 'address': '192.168.7.131:50288', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:44:27', 'version': 'v2.6.18', 'status': 'true', 'group': '测试', 'mark': ''}]
+[2025-05-28 06:44:44,048] INFO in webhook: Client Disconnect: {'Full': '{"Status":"disconnected","ID":"d29156936363b3a6b8c059b262512b044c76d98b","IP":"192.168.7.131:50288","HostName":"root.kali","Version":"SSH-v2.6.18-2-gd042bc4-linux_amd64","Timestamp":"2025-05-28T06:44:44.046163021Z"}', 'text': 'root.kali (d29156936363b3a6b8c059b262512b044c76d98b) SSH-v2.6.18-2-gd042bc4-linux_amd64 disconnected'}
+[2025-05-28 06:44:44,205] INFO in client: Redis Raw Client Data: [{'sessid': 'd29156936363b3a6b8c059b262512b044c76d98b', 'hostname': 'root.kali', 'address': '192.168.7.131:50288', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:44:44', 'version': 'v2.6.18', 'status': 'false', 'group': '测试', 'mark': ''}]
+[2025-05-28 06:44:44,737] INFO in client: Redis Raw Client Data: [{'sessid': 'd29156936363b3a6b8c059b262512b044c76d98b', 'hostname': 'root.kali', 'address': '192.168.7.131:50288', 'username': 'root', 'attribution': '-', 'os': 'linux', 'arch': 'amd64', 'time': '2025-05-28 06:44:44', 'version': 'v2.6.18', 'status': 'false', 'group': '测试', 'mark': ''}]
+[2025-05-28 06:44:47,425] INFO in client: Redis Raw Client Data: []
