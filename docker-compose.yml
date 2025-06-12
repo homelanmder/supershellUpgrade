@@ -5,7 +5,7 @@ services:
     image: nginx:1.18-alpine
     ports:
       - 8888:80
-    privileged: true
+    privileged: false
     volumes:
       - ./static:/static
       - ./volume/nginx/log:/var/log/nginx
@@ -21,7 +21,7 @@ services:
       dockerfile: Dockerfile.Flask
     expose:
       - 5000
-    privileged: true
+    privileged: false
     volumes:
       - ./const.py:/app/const.py
       - ./config.py:/app/config.py
@@ -44,7 +44,7 @@ services:
     image: redis:5.0.7-alpine
     expose:
       - 6379
-    privileged: true
+    privileged: false
     volumes:
       - ./volume/redis/redis.conf:/etc/redis/redis.conf
       - ./volume/redis/data:/data
@@ -60,7 +60,7 @@ services:
       - 3232
     ports:
       - 3232:3232
-    privileged: true
+    privileged: false
     volumes:
       - ./volume/rssh:/data
       - ./volume/flask/authorized_keys:/data/authorized_keys
@@ -72,7 +72,7 @@ services:
       dockerfile: Dockerfile.Ttyd
     expose:
       - 7681
-    privileged: true
+    privileged: false
     volumes:
       - ./volume/ttyd/ssh_config:/etc/ssh/ssh_config
       - ./volume/flask/key:/root/.ssh
@@ -93,7 +93,7 @@ services:
       dockerfile: Dockerfile.Ttyd
     expose:
       - 7682
-    privileged: true
+    privileged: false
     volumes:
       - ./volume/ttyd/ssh_config:/etc/ssh/ssh_config
       - ./volume/flask/key:/root/.ssh
